@@ -1,11 +1,11 @@
 @use "./base.scss";
 
 // ═══════════════════════════════════════════════
-// OneMind Codex — TACTICAL DARK Theme
+// OneMind Codex — TACTICAL DARK Theme v3
 // Zeus Red (#E63946) + Cyan (#00D9FF)
+// Clean, readable, tactical
 // ═══════════════════════════════════════════════
 
-// --- CSS Variables for tactical accents ---
 :root {
   --tac-red: #E63946;
   --tac-red-dim: #B82D3A;
@@ -18,11 +18,14 @@
   --tac-border: #1e2530;
 }
 
-// --- Page title / logo styling ---
+// ─────────────────────────────────────
+// Sidebar — Page Title / Logo
+// ─────────────────────────────────────
+
 .page-title a {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   text-decoration: none !important;
   background: none !important;
   padding: 0 !important;
@@ -30,7 +33,7 @@
   &:hover {
     opacity: 0.9;
     .page-logo {
-      filter: drop-shadow(0 0 6px rgba(230, 57, 70, 0.5));
+      filter: drop-shadow(0 0 8px rgba(230, 57, 70, 0.4));
     }
   }
 }
@@ -38,37 +41,116 @@
 .page-title a span {
   font-family: var(--titleFont), sans-serif;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  font-size: 0.95em;
+  font-size: 1rem;
   background: linear-gradient(135deg, var(--tac-red), var(--tac-cyan));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-// --- Explorer sidebar — tactical panel ---
+// ─────────────────────────────────────
+// Sidebar — Explorer Navigation
+// ─────────────────────────────────────
+
 .explorer {
   border-top: 2px solid var(--tac-red);
   padding-top: 0.75rem;
+  margin-top: 0.25rem;
 }
 
-button#explorer {
-  font-family: var(--headerFont), monospace;
+button#explorer,
+button.desktop-explorer h2 {
+  font-family: var(--headerFont), sans-serif;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: var(--tac-cyan);
 }
 
-// Folder/file styling in explorer
-.folder-title {
-  font-weight: 600;
-  letter-spacing: 0.03em;
+// Explorer tree — better item spacing & interaction
+.explorer-content {
+  ul li > a {
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    display: block;
+    transition: background-color 0.12s ease, color 0.12s ease, padding-left 0.12s ease;
+
+    &:hover {
+      background: rgba(0, 217, 255, 0.06);
+      color: var(--tac-cyan);
+      padding-left: 0.65rem;
+    }
+
+    &.active {
+      background: rgba(230, 57, 70, 0.1);
+      color: var(--tac-red) !important;
+      opacity: 1;
+      font-weight: 600;
+      border-left: 2px solid var(--tac-red);
+      padding-left: calc(0.5rem - 2px);
+    }
+  }
+
+  .folder-container {
+    padding: 0.25rem 0;
+    border-radius: 4px;
+    transition: background-color 0.12s ease;
+
+    &:hover {
+      background: rgba(0, 217, 255, 0.04);
+    }
+
+    div > a,
+    div > button span {
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  .folder-outer > ul {
+    border-left-color: var(--tac-border);
+  }
 }
 
-// --- Graph nodes — tactical network ---
+// Folder hover color
+.folder-container div > a:hover,
+.folder-container div > button:hover span {
+  color: var(--tac-cyan) !important;
+}
+
+// Folder icon color
+.folder-icon {
+  color: var(--tac-red);
+}
+
+// ─────────────────────────────────────
+// Sidebar — Search Bar
+// ─────────────────────────────────────
+
+button#search-button {
+  border-radius: 6px;
+  border: 1px solid var(--tac-border);
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover,
+  &:focus {
+    border-color: var(--tac-cyan);
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.15);
+  }
+}
+
+// ─────────────────────────────────────
+// Graph — tactical network
+// ─────────────────────────────────────
+
 .graph > svg .node > circle {
   stroke: var(--tac-cyan) !important;
 }
@@ -78,116 +160,88 @@ button#explorer {
   opacity: 0.3;
 }
 
-// --- Search bar — HUD style ---
-button#search-button {
-  border-radius: 2px;
-  border: 1px solid var(--tac-border);
-  font-family: var(--codeFont), monospace;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+// ─────────────────────────────────────
+// Article Content — clean readable text
+// ─────────────────────────────────────
 
-  &:hover,
-  &:focus {
-    border-color: var(--tac-cyan);
-    box-shadow: 0 0 8px rgba(0, 217, 255, 0.2);
-  }
-}
-
-// --- Article content — clean tactical typography ---
 article {
+  font-size: 1.02rem;
+  line-height: 1.78;
+
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--headerFont), monospace;
-    letter-spacing: 0.02em;
+    font-family: var(--headerFont), sans-serif;
+    line-height: 1.3;
   }
 
   h1 {
     font-size: 2rem;
+    font-weight: 700;
     border-bottom: 2px solid var(--tac-red);
     padding-bottom: 0.5rem;
     margin-bottom: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
   }
 
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 600;
     margin-top: 2.5rem;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.35rem;
     border-bottom: 1px solid var(--tac-border);
-
-    &::before {
-      content: "// ";
-      color: var(--tac-cyan);
-      opacity: 0.6;
-      font-family: var(--codeFont);
-    }
+    color: var(--dark);
+    letter-spacing: 0.01em;
   }
 
   h3 {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
+    font-weight: 600;
     color: var(--tac-cyan);
-
-    &::before {
-      content: "> ";
-      opacity: 0.5;
-    }
+    margin-top: 2rem;
   }
 
-  // Blockquote — red accent bar, dark glass
+  h4, h5, h6 {
+    font-weight: 600;
+  }
+
+  // Blockquote
   blockquote {
     border-left: 3px solid var(--tac-red);
-    background: rgba(230, 57, 70, 0.05);
-    border-radius: 0 2px 2px 0;
-    padding: 0.8rem 1rem;
+    background: rgba(230, 57, 70, 0.04);
+    border-radius: 0 6px 6px 0;
+    padding: 0.8rem 1.2rem;
     margin: 1.2rem 0;
     font-style: normal;
   }
 
-  // Code blocks — dark terminal look
+  // Code blocks — clean dark look
   pre {
-    border-radius: 4px;
+    border-radius: 6px;
     border: 1px solid var(--tac-border);
-    position: relative;
-
-    &::before {
-      content: "TERMINAL";
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 0.15rem 0.5rem;
-      font-family: var(--codeFont);
-      font-size: 0.6rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--tac-cyan);
-      opacity: 0.4;
-    }
+    font-size: 0.88rem;
   }
 
   // Inline code
   code:not(pre code) {
     background: var(--highlight);
-    padding: 0.15rem 0.4rem;
-    border-radius: 2px;
+    padding: 0.15rem 0.45rem;
+    border-radius: 3px;
     font-size: 0.88em;
     border: 1px solid var(--tac-border);
   }
 
-  // Tables — grid/matrix look
+  // Tables
   table {
-    border-radius: 2px;
+    border-radius: 6px;
     overflow: hidden;
     border: 1px solid var(--tac-border);
+    font-size: 0.94rem;
 
     th {
-      background: rgba(0, 217, 255, 0.08);
+      background: rgba(0, 217, 255, 0.06);
       font-family: var(--headerFont);
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 0.8em;
-      letter-spacing: 0.06em;
+      font-weight: 600;
+      font-size: 0.88em;
+      letter-spacing: 0.02em;
       color: var(--tac-cyan);
       border-bottom: 2px solid var(--tac-red);
     }
@@ -197,30 +251,26 @@ article {
     }
   }
 
-  // Images
+  // General images — subtle border
   img {
-    border-radius: 2px;
+    border-radius: 6px;
     border: 1px solid var(--tac-border);
   }
 
-  // Horizontal rules — tactical scan line
+  // Horizontal rules — gradient scan line
   hr {
     border: none;
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--tac-red), var(--tac-cyan), transparent);
     margin: 2.5rem 0;
-    opacity: 0.6;
+    opacity: 0.5;
   }
 
-  // Strong text — slight red tint
-  strong {
-    color: var(--dark);
-  }
-
-  // Lists — tighter tactical feel
+  // Lists
   ul, ol {
     li {
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.35rem;
+      line-height: 1.75;
     }
   }
 
@@ -230,20 +280,32 @@ article {
 
   ol > li::marker {
     color: var(--tac-cyan);
-    font-weight: 700;
+    font-weight: 600;
+  }
+
+  // Links
+  a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  strong {
+    font-weight: 600;
   }
 }
 
-// --- Tag pills — tactical badges ---
+// ─────────────────────────────────────
+// Tag Badges
+// ─────────────────────────────────────
+
 a.internal.tag-link {
-  background: rgba(0, 217, 255, 0.08) !important;
-  border: 1px solid var(--tac-cyan);
-  border-radius: 2px;
+  background: rgba(0, 217, 255, 0.06) !important;
+  border: 1px solid rgba(0, 217, 255, 0.25);
+  border-radius: 4px;
   padding: 0.15rem 0.6rem !important;
-  font-size: 0.75rem;
-  font-family: var(--codeFont);
+  font-size: 0.78rem;
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   transition: all 0.15s ease;
 
@@ -255,30 +317,39 @@ a.internal.tag-link {
   }
 }
 
-// --- Breadcrumbs — path display ---
+// ─────────────────────────────────────
+// Breadcrumbs
+// ─────────────────────────────────────
+
 .breadcrumb-container {
-  opacity: 0.5;
-  font-size: 0.8rem;
+  opacity: 0.6;
+  font-size: 0.82rem;
   font-family: var(--codeFont);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.25rem;
 }
 
-// --- Backlinks section ---
+// ─────────────────────────────────────
+// Backlinks
+// ─────────────────────────────────────
+
 .backlinks {
   border-top: 1px solid var(--tac-border);
   padding-top: 0.75rem;
 
   & > h3 {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     color: var(--tac-cyan);
     font-weight: 700;
-    font-family: var(--codeFont);
   }
 }
 
-// --- TOC refinements ---
+// ─────────────────────────────────────
+// Table of Contents
+// ─────────────────────────────────────
+
 .toc {
   .depth-1 > a {
     font-weight: 600;
@@ -287,22 +358,23 @@ a.internal.tag-link {
   & > h3 {
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    font-size: 0.8rem;
-    font-family: var(--codeFont);
+    font-size: 0.82rem;
     color: var(--tac-cyan);
+    font-weight: 700;
   }
 }
 
-// --- Footer — tactical branding ---
+// ─────────────────────────────────────
+// Footer
+// ─────────────────────────────────────
+
 footer {
   border-top: 1px solid var(--tac-border);
   padding-top: 1.5rem;
   margin-top: 4rem;
 
   p {
-    font-size: 0.78rem;
-    font-family: var(--codeFont);
-    letter-spacing: 0.03em;
+    font-size: 0.82rem;
     opacity: 0.5;
   }
 
@@ -312,10 +384,9 @@ footer {
 
   a {
     font-weight: 600;
-    font-size: 0.8rem;
-    font-family: var(--codeFont);
+    font-size: 0.82rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     opacity: 0.6;
     transition: all 0.15s ease;
 
@@ -326,95 +397,91 @@ footer {
   }
 }
 
-// --- Dark mode — full tactical environment ---
+// ─────────────────────────────────────
+// Dark Mode
+// ─────────────────────────────────────
+
 :root[saved-theme="dark"] {
   .center > article {
-    background: rgba(21, 27, 36, 0.6);
-    border-radius: 4px;
+    background: rgba(21, 27, 36, 0.5);
+    border-radius: 6px;
     padding: 1.5rem;
-    border: 1px solid rgba(0, 217, 255, 0.06);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-  }
-
-  // Subtle scan lines overlay
-  body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 9999;
-    background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(0, 217, 255, 0.008) 2px,
-      rgba(0, 217, 255, 0.008) 4px
-    );
+    border: 1px solid rgba(0, 217, 255, 0.05);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
   }
 }
 
-// --- Light mode — clean tactical paper ---
+// ─────────────────────────────────────
+// Light Mode
+// ─────────────────────────────────────
+
 :root[saved-theme="light"] {
   .center > article {
     background: rgba(255, 255, 255, 0.7);
-    border-radius: 4px;
+    border-radius: 6px;
     padding: 1.5rem;
     border: 1px solid #d8dce3;
   }
 }
 
-// --- Homepage hero ---
+// ─────────────────────────────────────
+// Homepage Hero
+// ─────────────────────────────────────
+
 .page[data-slug="index"] {
+  // Title — centered, clean
   article > h1:first-of-type {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     text-align: center;
     border: none;
     padding-bottom: 0;
     margin-bottom: 0.5rem;
-    letter-spacing: 0.04em;
-
-    &::before {
-      content: none;
-    }
   }
 
-  article > p:first-of-type {
+  // Tagline blockquote — centered, no blockquote styling
+  article > blockquote:first-of-type {
     text-align: center;
-    font-size: 1.1rem;
-    opacity: 0.7;
-    margin-bottom: 2rem;
-    letter-spacing: 0.02em;
+    border-left: none;
+    background: none;
+    padding: 0;
+    margin: 0 auto 2rem;
+    max-width: 640px;
+    opacity: 0.75;
+    font-size: 1.05rem;
   }
 
-  // Homepage logo
+  // Hero logo — large, no border
   .hero-logo {
     display: flex;
     justify-content: center;
-    margin: 2rem 0 1rem;
+    margin: 2.5rem auto 1.5rem;
 
     img {
-      max-width: 220px;
+      max-width: 400px;
+      width: 85%;
       height: auto;
-      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+      border: none !important;
+      border-radius: 0 !important;
+      filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.2));
     }
   }
 }
 
-// --- Smooth transitions ---
+// ─────────────────────────────────────
+// Global — Transitions
+// ─────────────────────────────────────
+
 a, button, input {
   transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
 }
 
-// --- Selection color ---
+// Selection
 ::selection {
-  background: rgba(0, 217, 255, 0.3);
+  background: rgba(0, 217, 255, 0.25);
   color: #fff;
 }
 
-// --- Scrollbar (WebKit) — slim tactical ---
+// Scrollbar (WebKit)
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -425,14 +492,14 @@ a, button, input {
 
 ::-webkit-scrollbar-thumb {
   background: var(--gray);
-  border-radius: 1px;
+  border-radius: 3px;
 
   &:hover {
     background: var(--tac-red);
   }
 }
 
-// --- Darkmode toggle button ---
+// Dark mode toggle
 .darkmode svg {
   transition: transform 0.2s ease;
 
@@ -441,11 +508,10 @@ a, button, input {
   }
 }
 
-// --- Content meta (date, read time) ---
+// Content meta
 .content-meta {
   font-family: var(--codeFont);
-  font-size: 0.8rem;
-  letter-spacing: 0.03em;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
   opacity: 0.5;
-  text-transform: uppercase;
 }
