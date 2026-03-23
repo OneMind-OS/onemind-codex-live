@@ -11,8 +11,8 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
   return (
     <h2 class={classNames(displayClass, "page-title")}>
       <a href={baseDir}>
-        <img src={logoLightPath} alt="OneMind" class="page-logo page-logo-light" width="52" height="52" />
-        <img src={logoDarkPath} alt="OneMind" class="page-logo page-logo-dark" width="52" height="52" />
+        <img src={logoLightPath} alt="OneMind" class="page-logo page-logo-light" width="156" height="156" />
+        <img src={logoDarkPath} alt="OneMind" class="page-logo page-logo-dark" width="156" height="156" />
         <span>{title}</span>
       </a>
     </h2>
@@ -33,7 +33,7 @@ PageTitle.css = `
 }
 
 .page-logo {
-  height: 52px;
+  height: 156px;
   width: auto;
   flex-shrink: 0;
   object-fit: contain;
