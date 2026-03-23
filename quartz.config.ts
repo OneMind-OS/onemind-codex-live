@@ -14,7 +14,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
-    baseUrl: "onemind-codex.pages.dev",
+    baseUrl: "live.onemindcodex.com",
     ignorePatterns: ["private", ".obsidian"],
     defaultDateType: "modified",
     theme: {
