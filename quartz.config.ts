@@ -21,7 +21,7 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        title: { name: "Orbitron", weights: [700, 800, 900] },
+        title: { name: "Space Grotesk", weights: [500, 700] },
         header: "Space Grotesk",
         body: { name: "Inter", weights: [400, 500, 600], includeItalic: true },
         code: "JetBrains Mono",
