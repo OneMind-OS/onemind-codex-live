@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <!-- Outer hexagon frame — tactical containment -->
+  <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" stroke="url(#tac)" stroke-width="2" fill="none"/>
+  <!-- Inner hexagon — core -->
+  <polygon points="20,8 30,13.5 30,26.5 20,32 10,26.5 10,13.5" stroke="url(#tac)" stroke-width="1" fill="url(#tac)" opacity="0.08"/>
+  <!-- Crosshair vertical -->
+  <line x1="20" y1="6" x2="20" y2="16" stroke="#00D9FF" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="20" y1="24" x2="20" y2="34" stroke="#00D9FF" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Crosshair horizontal -->
+  <line x1="8" y1="20" x2="16" y2="20" stroke="#00D9FF" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="24" y1="20" x2="32" y2="20" stroke="#00D9FF" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Center eye/node -->
+  <circle cx="20" cy="20" r="3.5" stroke="#E63946" stroke-width="2" fill="none"/>
+  <circle cx="20" cy="20" r="1.5" fill="#E63946"/>
+  <!-- Corner brackets — tactical HUD -->
+  <path d="M6,14 L6,11 L9,11" stroke="#E63946" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M34,14 L34,11 L31,11" stroke="#E63946" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M6,26 L6,29 L9,29" stroke="#E63946" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M34,26 L34,29 L31,29" stroke="#E63946" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="tac" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E63946"/>
+      <stop offset="100%" stop-color="#00D9FF"/>
+    </linearGradient>
+  </defs>
+</svg>

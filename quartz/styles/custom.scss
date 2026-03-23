@@ -1,3 +1,438 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// ═══════════════════════════════════════════════
+// OneMind Codex — TACTICAL DARK Theme
+// Zeus Red (#E63946) + Cyan (#00D9FF)
+// ═══════════════════════════════════════════════
+
+// --- CSS Variables for tactical accents ---
+:root {
+  --tac-red: #E63946;
+  --tac-red-dim: #B82D3A;
+  --tac-red-glow: #FF4D5A;
+  --tac-cyan: #00D9FF;
+  --tac-cyan-dim: #00A8CC;
+  --tac-cyan-glow: #33E0FF;
+  --tac-bg: #0a0e14;
+  --tac-surface: #151b24;
+  --tac-border: #1e2530;
+}
+
+// --- Page title / logo styling ---
+.page-title a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none !important;
+  background: none !important;
+  padding: 0 !important;
+
+  &:hover {
+    opacity: 0.9;
+    .page-logo {
+      filter: drop-shadow(0 0 6px rgba(230, 57, 70, 0.5));
+    }
+  }
+}
+
+.page-title a span {
+  font-family: var(--titleFont), monospace;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.95em;
+  background: linear-gradient(135deg, var(--tac-red), var(--tac-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// --- Explorer sidebar — tactical panel ---
+.explorer {
+  border-top: 2px solid var(--tac-red);
+  padding-top: 0.75rem;
+}
+
+button#explorer {
+  font-family: var(--headerFont), monospace;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--tac-cyan);
+}
+
+// Folder/file styling in explorer
+.folder-title {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+// --- Graph nodes — tactical network ---
+.graph > svg .node > circle {
+  stroke: var(--tac-cyan) !important;
+}
+
+.graph > svg .link {
+  stroke: var(--tac-red) !important;
+  opacity: 0.3;
+}
+
+// --- Search bar — HUD style ---
+button#search-button {
+  border-radius: 2px;
+  border: 1px solid var(--tac-border);
+  font-family: var(--codeFont), monospace;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover,
+  &:focus {
+    border-color: var(--tac-cyan);
+    box-shadow: 0 0 8px rgba(0, 217, 255, 0.2);
+  }
+}
+
+// --- Article content — clean tactical typography ---
+article {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headerFont), monospace;
+    letter-spacing: 0.02em;
+  }
+
+  h1 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--tac-red);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 2.5rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--tac-border);
+
+    &::before {
+      content: "// ";
+      color: var(--tac-cyan);
+      opacity: 0.6;
+      font-family: var(--codeFont);
+    }
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    color: var(--tac-cyan);
+
+    &::before {
+      content: "> ";
+      opacity: 0.5;
+    }
+  }
+
+  // Blockquote — red accent bar, dark glass
+  blockquote {
+    border-left: 3px solid var(--tac-red);
+    background: rgba(230, 57, 70, 0.05);
+    border-radius: 0 2px 2px 0;
+    padding: 0.8rem 1rem;
+    margin: 1.2rem 0;
+    font-style: normal;
+  }
+
+  // Code blocks — dark terminal look
+  pre {
+    border-radius: 4px;
+    border: 1px solid var(--tac-border);
+    position: relative;
+
+    &::before {
+      content: "TERMINAL";
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.15rem 0.5rem;
+      font-family: var(--codeFont);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--tac-cyan);
+      opacity: 0.4;
+    }
+  }
+
+  // Inline code
+  code:not(pre code) {
+    background: var(--highlight);
+    padding: 0.15rem 0.4rem;
+    border-radius: 2px;
+    font-size: 0.88em;
+    border: 1px solid var(--tac-border);
+  }
+
+  // Tables — grid/matrix look
+  table {
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid var(--tac-border);
+
+    th {
+      background: rgba(0, 217, 255, 0.08);
+      font-family: var(--headerFont);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.8em;
+      letter-spacing: 0.06em;
+      color: var(--tac-cyan);
+      border-bottom: 2px solid var(--tac-red);
+    }
+
+    td {
+      border-bottom: 1px solid var(--tac-border);
+    }
+  }
+
+  // Images
+  img {
+    border-radius: 2px;
+    border: 1px solid var(--tac-border);
+  }
+
+  // Horizontal rules — tactical scan line
+  hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--tac-red), var(--tac-cyan), transparent);
+    margin: 2.5rem 0;
+    opacity: 0.6;
+  }
+
+  // Strong text — slight red tint
+  strong {
+    color: var(--dark);
+  }
+
+  // Lists — tighter tactical feel
+  ul, ol {
+    li {
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  ul > li::marker {
+    color: var(--tac-red);
+  }
+
+  ol > li::marker {
+    color: var(--tac-cyan);
+    font-weight: 700;
+  }
+}
+
+// --- Tag pills — tactical badges ---
+a.internal.tag-link {
+  background: rgba(0, 217, 255, 0.08) !important;
+  border: 1px solid var(--tac-cyan);
+  border-radius: 2px;
+  padding: 0.15rem 0.6rem !important;
+  font-size: 0.75rem;
+  font-family: var(--codeFont);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: all 0.15s ease;
+
+  &:hover {
+    background: var(--tac-red) !important;
+    border-color: var(--tac-red);
+    color: #fff !important;
+    -webkit-text-fill-color: #fff;
+  }
+}
+
+// --- Breadcrumbs — path display ---
+.breadcrumb-container {
+  opacity: 0.5;
+  font-size: 0.8rem;
+  font-family: var(--codeFont);
+  letter-spacing: 0.03em;
+}
+
+// --- Backlinks section ---
+.backlinks {
+  border-top: 1px solid var(--tac-border);
+  padding-top: 0.75rem;
+
+  & > h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--tac-cyan);
+    font-weight: 700;
+    font-family: var(--codeFont);
+  }
+}
+
+// --- TOC refinements ---
+.toc {
+  .depth-1 > a {
+    font-weight: 600;
+  }
+
+  & > h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.8rem;
+    font-family: var(--codeFont);
+    color: var(--tac-cyan);
+  }
+}
+
+// --- Footer — tactical branding ---
+footer {
+  border-top: 1px solid var(--tac-border);
+  padding-top: 1.5rem;
+  margin-top: 4rem;
+
+  p {
+    font-size: 0.78rem;
+    font-family: var(--codeFont);
+    letter-spacing: 0.03em;
+    opacity: 0.5;
+  }
+
+  ul {
+    flex-wrap: wrap;
+  }
+
+  a {
+    font-weight: 600;
+    font-size: 0.8rem;
+    font-family: var(--codeFont);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+    transition: all 0.15s ease;
+
+    &:hover {
+      opacity: 1;
+      color: var(--tac-cyan);
+    }
+  }
+}
+
+// --- Dark mode — full tactical environment ---
+:root[saved-theme="dark"] {
+  .center > article {
+    background: rgba(21, 27, 36, 0.6);
+    border-radius: 4px;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 217, 255, 0.06);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  // Subtle scan lines overlay
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 9999;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 217, 255, 0.008) 2px,
+      rgba(0, 217, 255, 0.008) 4px
+    );
+  }
+}
+
+// --- Light mode — clean tactical paper ---
+:root[saved-theme="light"] {
+  .center > article {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    padding: 1.5rem;
+    border: 1px solid #d8dce3;
+  }
+}
+
+// --- Homepage hero --- 
+.page[data-slug="index"] {
+  article > h1:first-of-type {
+    font-size: 2.5rem;
+    text-align: center;
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.06em;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  article > p:first-of-type {
+    text-align: center;
+    font-size: 1.1rem;
+    opacity: 0.7;
+    margin-bottom: 2rem;
+    letter-spacing: 0.02em;
+  }
+}
+
+// --- Smooth transitions ---
+a, button, input {
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+}
+
+// --- Selection color ---
+::selection {
+  background: rgba(0, 217, 255, 0.3);
+  color: #fff;
+}
+
+// --- Scrollbar (WebKit) — slim tactical ---
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray);
+  border-radius: 1px;
+
+  &:hover {
+    background: var(--tac-red);
+  }
+}
+
+// --- Darkmode toggle button ---
+.darkmode svg {
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: rotate(15deg);
+  }
+}
+
+// --- Content meta (date, read time) ---
+.content-meta {
+  font-family: var(--codeFont);
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
