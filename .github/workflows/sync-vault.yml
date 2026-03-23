@@ -21,7 +21,7 @@ jobs:
       - name: Checkout student repo
         uses: actions/checkout@v4
         with:
-          repository: OneMind-OS/onemind-codex-live
+          repository: OneMind-OS/onemind-codex-template
           token: ${{ secrets.VAULT_SYNC_TOKEN }}
           path: _student-repo
           fetch-depth: 1

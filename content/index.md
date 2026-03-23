@@ -50,7 +50,7 @@ The vault is divided into 4 quadrants covering every domain of life:
 
 ### Option 1 — Get Your Own Copy
 
-1. Go to the **[OneMind Codex Vault](https://github.com/OneMind-OS/onemind-codex-live)** on GitHub
+1. Go to the **[OneMind Codex Template](https://github.com/OneMind-OS/onemind-codex-template)** on GitHub
 2. Click the green **"Use this template"** button → **"Create a new repository"**
 3. Open your new repo folder in [Obsidian](https://obsidian.md) (free)
 4. Read `_codex/INTERFACE.md` — it explains everything to you (and your AI)

@@ -8,7 +8,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      "Get the Vault": "https://github.com/OneMind-OS/onemind-codex-live",
+      "Get the Vault": "https://github.com/OneMind-OS/onemind-codex-template",
       "OneMind GitHub": "https://github.com/OneMind-OS",
       "Zeus Delacruz": "https://zeusdelacruz.com",
       Community: "https://onemindcodex.com",
