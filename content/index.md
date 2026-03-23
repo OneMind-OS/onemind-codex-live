@@ -3,6 +3,7 @@ title: "One Mind Codex — Live"
 type: doctrine
 status: active
 created: 2026-03-19
+modified: 2026-03-23
 owner: zeus
 tags: [type/doctrine, domain/codex]
 ai_summary: "Public living codex vault — forkable example of the One Mind CODEX framework by Zeus Delacruz"
