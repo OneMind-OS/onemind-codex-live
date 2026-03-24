@@ -23,8 +23,8 @@ Every prior framework — GTD, PARA, CODE, Zettelkasten — was designed for hum
 One Mind starts where they stop:
 
 - **Structured for AI** — every document has machine-readable frontmatter, typed metadata, and progressive disclosure layers so agents can navigate without reading everything.
-- **Execution built in** — capture and organize are table stakes. One Mind includes *direction*, *execution*, and *examination* as first-class steps.
-- **Feedback loops** — weekly and monthly reviews are built into the method, not bolted on as afterthoughts.
+- **Execution built in** — capture and organize are table stakes. One Mind includes *direction*, *execution*, and *multiplication* (compounding feedback) as first-class steps.
+- **Entity taxonomy** — 16 entity types across 5 categories (intent, knowledge, measurement, operator, capability) so the system knows WHAT something is, not just where it's filed.
 - **Tool-agnostic** — the vault is plain Markdown in folders. Obsidian today, whatever tomorrow. Your system outlives any app.
 
 The result: a life OS that a human steers and AI agents execute against — together forming one mind.
@@ -69,15 +69,18 @@ Every piece of information flows through five stages:
 
 ```
   ┌─────────┐    ┌───────────┐    ┌────────┐    ┌─────────┐    ┌──────────┐
-  │ CAPTURE │───▶│ ORGANIZE  │───▶│ DIRECT │───▶│ EXECUTE │───▶│ eXAMINE  │
+  │ CAPTURE │───▶│ ORGANIZE  │───▶│ DIRECT │───▶│ EXECUTE │───▶│ × MULTI- │
+  │         │    │           │    │        │    │         │    │   PLY    │
   └─────────┘    └───────────┘    └────────┘    └─────────┘    └──────────┘
-   Inbox, voice,   4 quadrants,    Prioritize,   Agents run     Weekly &
-   quick capture   100 domains,    route to       tasks, skills  monthly
-   from anywhere   frontmatter     human or AI    execute SOPs   reviews
+   Inbox, voice,   4 quadrants,    Command:       Operators      Review,
+   quick capture   100 domains,    prioritize,    run the work:  measure,
+   from anywhere   entity types,   assign owner,  humans, agents,extract
+                   frontmatter     define done     SOPs, skills   lessons
                                                                     │
-                                                                    │
-                          ◀─────── feedback loop ──────────────────┘
+                        ◀─── each cycle multiplies the system ─────┘
 ```
+
+**The X in CODEX is × — the multiplication sign.** Every cycle through the loop multiplies the system's intelligence: metrics get tracked, SOPs get refined, agents get smarter, knowledge compounds.
 
 ### How CODEX Compares
 
@@ -88,9 +91,11 @@ Every piece of information flows through five stages:
 | Covers entire life | ❌ | ❌ | ❌ | ✅ |
 | AI can navigate | ❌ | ❌ | ❌ | ✅ |
 | AI can execute | ❌ | ❌ | ❌ | ✅ |
+| Entity type system | ❌ | ❌ | ❌ | ✅ (16 types) |
 | Built-in metrics | ❌ | ❌ | ❌ | ✅ |
-| Feedback loops | ❌ | ❌ | ❌ | ✅ |
+| Compounding feedback | ❌ | ❌ | ❌ | ✅ |
 | Tool-agnostic | ✅ | ❌ | ❌ | ✅ |
+| Progressive activation | ❌ | ❌ | ❌ | ✅ (4 → 100) |
 
 CODEX isn't better at note-taking. It's a different category — a **life operating system** with AI execution and built-in accountability.
 
@@ -175,8 +180,8 @@ your-codex/
 2. **Open in Obsidian** — or any Markdown editor. Obsidian recommended for the best experience.
 3. **Read `_codex/INTERFACE.md`** — this is the navigation guide. Understand the structure before you start filling it.
 4. **Start capturing** — use templates from `_codex/templates/`. Don't overthink organization — capture first, organize second.
-5. **Pick one quadrant** — don't try to build all four at once. Start with the quadrant that has the most urgency in your life right now.
-6. **Review weekly** — the eXamine step isn't optional. Use the review profile in `_codex/profiles/` to stay accountable.
+5. **Start with 4 quadrants, not 100 domains** — don't try to activate all domains at once. Drop things into the right quadrant. Domains activate as your life expands. See CODEX-FRAMEWORK.md for the Progressive Activation guide.
+6. **Review weekly** — the × (multiply) step isn't optional. Use the review profile in `_codex/profiles/` to stay accountable. Each review cycle multiplies the system's value.
 
 ### For AI Agents
 

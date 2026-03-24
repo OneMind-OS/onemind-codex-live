@@ -17,7 +17,7 @@ ai_summary: "Entry point for any agent or human navigating this vault — read f
 
 ## What This Is
 
-This is a **One Mind Codex** — a structured knowledge base in plain Markdown, organized using the CODEX method (Capture → Organize → Direct → Execute → eXamine). It is the single source of truth for all knowledge, decisions, plans, relationships, and operations.
+This is a **One Mind Codex** — a structured knowledge base in plain Markdown, organized using the CODEX method (Capture → Organize → Direct → Execute → × Multiply). It is the single source of truth for all knowledge, decisions, plans, relationships, and operations.
 
 **Format**: Markdown + YAML frontmatter + `[[wiki-links]]` + tags
 **Storage**: Git repository (versioned, portable, forkable)
@@ -74,12 +74,12 @@ Each quadrant contains **numbered domain folders**. Each domain folder has a `RE
 ```text
 C — CAPTURE    Everything that enters your awareness enters the vault
 O — ORGANIZE   Route it to the right domain and apply the right template
-D — DIRECT     Decide what matters — set priorities, assign agents
+D — DIRECT     Command: decide what matters, assign operators, define done
 E — EXECUTE    Do the work, delegate to AI, complete tasks
-X — eXAMINE   Review, measure, learn, feed back into Capture
+× — MULTIPLY   Review, measure, extract lessons — each cycle compounds value
 ```
 
-This is a loop, not a checklist. You run it daily (micro), weekly (review), and quarterly (planning).
+This is a loop, not a checklist. You run it daily (micro), weekly (review), and quarterly (planning). The × step multiplies the system's intelligence with every cycle.
 
 ---
 

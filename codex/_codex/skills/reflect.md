@@ -3,14 +3,15 @@ title: "Skill: Reflect"
 type: skill
 status: active
 created: 2026-03-19
+updated: 2026-03-24
 tags: [type/skill, codex/method]
-ai_summary: "How to run reviews — the X (eXamine) step in CODEX"
+ai_summary: "How to run reviews — the × (multiply) step in CODEX"
 ---
 
 # Codex Skill: Reflect
 
 > How to run a review — weekly, monthly, or quarterly.
-> This is the X (eXamine) step in the CODEX method.
+> This is the × (multiply) step in the CODEX method — each review cycle multiplies the system's intelligence.
 
 ---
 

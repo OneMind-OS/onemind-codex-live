@@ -39,7 +39,7 @@ ai_summary: "Why CODEX wins against GTD, PARA, CODE, and Second Brain in the AI 
 
 ### CODE (Capture, Organize, Distill, Express)
 - ✅ Great at: Knowledge pipeline for content creators
-- ❌ Breaks because: Stops at "Express" (output for humans). No "Execute" (AI takes action). No "eXamine" (feedback loop). Knowledge-only, not life-scope.
+- ❌ Breaks because: Stops at "Express" (output for humans). No "Execute" (AI takes action). No "× Multiply" (compounding feedback loop). Knowledge-only, not life-scope.
 
 ### Second Brain
 - ✅ Great at: Making knowledge capture mainstream
@@ -57,11 +57,11 @@ ai_summary: "Why CODEX wins against GTD, PARA, CODE, and Second Brain in the AI 
 Every other framework was designed for humans alone and tries to retrofit AI. CODEX was built WITH AI as a first-class participant. The vault structure, frontmatter, `_codex/INTERFACE.md` — all designed for both human and AI consumption simultaneously.
 
 ### 2. The Full Pipeline: Method + Structure + Intelligence + Execution + Measurement
-- **METHOD:** CODEX (Capture → Organize → Direct → Execute → eXamine)
-- **STRUCTURE:** 4 quadrants, 100 domains, numbered system
+- **METHOD:** CODEX (Capture → Organize → Direct → Execute → × Multiply)
+- **STRUCTURE:** 4 quadrants, 100 domains (progressive activation), 16 entity types
 - **INTELLIGENCE:** `_codex/` (skills, templates, profiles, pinned system context)
 - **EXECUTION:** AI agents running skills from portable markdown
-- **MEASUREMENT:** Intelligence scores (HPI, LEI, GEI, UI), review cadences
+- **MEASUREMENT:** × Multiply step — metrics, reviews, intelligence scores (HPI, LEI, GEI, UI), review cadences
 
 Nobody else has all five. GTD has method only. PARA has structure only. Letta has intelligence only.
 
@@ -99,7 +99,7 @@ The world just converged on local-first, markdown-based, git-versioned knowledge
 
 > **"GTD taught you to clear your head. PARA taught you to organize files. CODEX teaches you to run your entire life — with AI as your co-pilot.**
 >
-> **Five steps: Capture, Organize, Direct, Execute, eXamine.**
+> **Five steps: Capture, Organize, Direct, Execute, × Multiply.**
 > **Plain markdown that any AI can read.**
 > **Your life's source code that outlives every app you'll ever use."**
 

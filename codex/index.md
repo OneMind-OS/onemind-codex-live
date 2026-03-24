@@ -36,8 +36,8 @@ Think of it as watching me build in real time. I update this as I work. You can 
 One Mind is an AI-native life operating system. Unlike GTD, PARA, or Second Brain — which were built for humans working alone — One Mind is designed for **humans and AI working together**. The system has one core method:
 
 ```text
-C → O → D → E → X
-Capture → Organize → Direct → Execute → eXamine
+C → O → D → E → ×
+Capture → Organize → Direct → Execute → × Multiply
 ```
 
 The vault is divided into 4 quadrants covering every domain of life:
