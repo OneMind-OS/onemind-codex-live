@@ -773,6 +773,273 @@ This keeps mobile friction near zero, Git conflicts at zero, and your VPS auto-s
 
 ---
 
+## Obsidian CLI
+
+**Obsidian 1.12+ ships with an official command-line interface.** This changes everything for CODEX — agents, automations, and you can now operate the vault safely from the terminal instead of editing raw files.
+
+### What It Is
+
+The Obsidian CLI is a **remote control for a running Obsidian app** — not a standalone headless tool. Every command passes through Obsidian's internal API, which means:
+
+- **File moves update wikilinks automatically** — no more broken links from `mv`
+- **Property changes update the index instantly** — frontmatter is always consistent
+- **Safe to operate while Obsidian is open** — no file-locking conflicts
+- **Link graph stays intact** — Obsidian manages all link resolution
+
+If Obsidian isn't running when you execute a CLI command, it launches automatically.
+
+### Setup (macOS)
+
+```bash
+# 1. Update Obsidian to v1.12.7+ (download latest installer from obsidian.md)
+# 2. In Obsidian: Settings → General → Command line interface → Enable → Register CLI
+# 3. Add to PATH in ~/.zshrc:
+export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
+# 4. Reload shell and verify:
+source ~/.zshrc
+obsidian version
+```
+
+> **v1.12.7 update** (March 23, 2026): The installer now bundles a new dedicated binary for CLI use, replacing the old Electron binary method. This makes terminal interactions significantly faster. Autocompletion for commands is now available when using the `id=` parameter.
+
+### 100+ Commands in 8 Categories
+
+| Category | Key Commands | Purpose |
+|----------|-------------|---------|
+| **File Operations** | `files`, `read`, `create`, `append`, `prepend`, `move`, `delete` | Note CRUD — create, read, update, delete notes safely |
+| **Properties** | `properties`, `property:set`, `property:remove` | Frontmatter/YAML manipulation |
+| **Search** | `search`, `search:context` | Full-text vault search with context |
+| **Tags** | `tags`, `tag`, `tags:rename` | List, filter, and bulk rename tags |
+| **Links** | `links`, `backlinks`, `unresolved`, `orphans` | Link graph health and analysis |
+| **Daily Notes** | `daily`, `daily:append`, `daily:read` | Daily note operations |
+| **Plugins** | `plugins`, `plugin:enable`, `plugin:disable` | Plugin lifecycle management |
+| **Developer** | `eval`, `devtools`, `dev:screenshot` | JS execution, debugging, internal API access |
+
+### Command Syntax
+
+```bash
+obsidian <command> [param=value] [flag]
+
+# If multiple vaults exist, specify which one:
+obsidian vault="OneMind-Codex" search query="TODO"
+```
+
+**Output formats** — most commands support `format=` for scripting:
+
+| Format | Use Case |
+|--------|----------|
+| `json` | Pipe through `jq` for programmatic use |
+| `csv` / `tsv` | Spreadsheet export |
+| `md` | Markdown output |
+| `paths` | File paths only (for piping to other commands) |
+| `text` | Human-readable (default) |
+| `tree` | Folder hierarchy |
+| `yaml` | YAML format (default for properties) |
+
+### Essential CODEX Operations
+
+**File operations — the safe way to manage your vault:**
+
+```bash
+# List all notes in vault
+obsidian files
+
+# Read a note
+obsidian read file="06 Inbox (Queue)/quick-idea"
+
+# Create a new note (with template)
+obsidian create name="06 Inbox (Queue)/new-task" template="task"
+
+# Create with inline content
+obsidian create name="06 Inbox (Queue)/capture" content="# Quick Thought\nSomething I need to process later"
+
+# Append to a note (add content to end)
+obsidian append file="daily/2026-03-25" content="\n- [ ] Review framework docs"
+
+# Move a note (wikilinks update automatically!)
+obsidian move file="06 Inbox (Queue)/new-task" to="01 Projects (Active)/"
+
+# Delete (to trash)
+obsidian delete file="old-note"
+```
+
+**Properties — frontmatter without manual YAML editing:**
+
+```bash
+# View all properties on a note
+obsidian properties file="goals/q2-revenue"
+
+# Set entity type, status, operator
+obsidian property:set file="goals/q2-revenue" name="type" value="goal"
+obsidian property:set file="goals/q2-revenue" name="status" value="active"
+obsidian property:set file="goals/q2-revenue" name="operator" value="human"
+
+# Remove a property
+obsidian property:remove file="goals/q2-revenue" name="deprecated-field"
+
+# Bulk-set a property across all notes with a tag
+obsidian tag tag="#inbox" format=paths | while read -r f; do
+  obsidian property:set file="$f" name="status" value="unprocessed"
+done
+```
+
+**Search — find anything in the vault:**
+
+```bash
+# Full-text search
+obsidian search query="revenue target"
+
+# Search with surrounding context (like grep -C)
+obsidian search:context query="Legacy AI" limit=10
+
+# Search and output as JSON for scripting
+obsidian search query="type: goal" format=json | jq '.[].file'
+```
+
+**Tags — vault-wide tag management:**
+
+```bash
+# List all tags with counts
+obsidian tags counts
+
+# Find all notes with a specific tag
+obsidian tag tag="#active"
+
+# Bulk rename a tag across entire vault
+obsidian tags:rename old=wip new=in-progress
+```
+
+**Links — vault health checks:**
+
+```bash
+# Find all outgoing links from a note
+obsidian links file="ONEMIND-CODEX"
+
+# Find all backlinks to a note
+obsidian backlinks file="goals/q2-revenue"
+
+# Find broken links (targets that don't exist)
+obsidian unresolved
+
+# Find orphan notes (nothing links to them)
+obsidian orphans
+```
+
+**Daily notes — terminal-native daily capture:**
+
+```bash
+# Open (or create) today's daily note
+obsidian daily
+
+# Append a task to today's daily note
+obsidian daily:append content="- [ ] Review CODEX framework updates"
+
+# Read today's content
+obsidian daily:read
+```
+
+### TUI Mode (Interactive Terminal)
+
+Running `obsidian` with no arguments launches a **full-screen Terminal User Interface**:
+
+| Key | Action |
+|-----|--------|
+| Arrow keys | Navigate files |
+| `/` | Filter by filename |
+| `Enter` | Open in Obsidian |
+| `n` | Create new note |
+| `d` | Delete file |
+| `r` | Rename |
+| `Ctrl+R` | Search command history |
+| `q` | Quit |
+
+Supports tab completion and command history — browse your entire codex without leaving the terminal.
+
+### How CLI Fits the CODEX Sync Architecture
+
+```
+┌───────────────────┐         ┌──────────┐         ┌──────────────────┐
+│     YOUR MAC      │ ──git──▶│  GITHUB  │◀──pull──│      VPS         │
+│                   │◀──git── │  (main)  │──push──▶│  (codex-watch)   │
+│  Obsidian Desktop │         │          │         │  auto-commit ~3s │
+│  Obsidian CLI ◀───┼── YOU   │          │         │  auto-pull ~1min │
+│  Obsidian CLI ◀───┼── Mac   │          │         │                  │
+│                   │  Agents │          │         │  Legacy AI       │
+└───────────────────┘         └──────────┘         │  (writes files   │
+       ↕                           │               │   directly)      │
+  Obsidian Sync                    ├──▶ CF Pages   └──────────────────┘
+       ↕                           └──▶ Student
+┌───────────────────┐
+│     iPHONE        │
+│  (Obsidian Mobile │
+│   + Sync)         │
+└───────────────────┘
+```
+
+**Before CLI:** Agents on your Mac (or scripts) had to edit vault files directly — the "back door." This bypassed Obsidian's link resolver, property indexer, and cache. Moving files with `mv` broke wikilinks. Editing frontmatter with `sed` left the index stale.
+
+**After CLI:** Any process on your Mac can use `obsidian create`, `obsidian move`, `obsidian property:set` — and Obsidian handles link updates, index refreshes, and conflict resolution internally.
+
+**What this means for your setup:**
+
+| Layer | How It Works Now | CLI Changes |
+|-------|-----------------|-------------|
+| **You on Mac** | Edit in Obsidian GUI, commit via Git | Can also create/move/search from terminal — useful for batch operations |
+| **Mac-side agents** | Would edit files directly | **Should use CLI instead** — safe link updates, instant indexing |
+| **VPS agents (Legacy AI)** | Write files directly, `codex-watch` auto-commits | **No change** — VPS runs headless, CLI requires GUI Obsidian running (Mac only for now) |
+| **iPhone** | Capture via Obsidian Mobile + Sync | No change — mobile stays capture-only |
+
+### Why This Matters for CODEX
+
+**1. Safe Organize step from terminal.** Move notes between domains and quadrants without breaking links:
+```bash
+# Move a processed inbox item to the right domain — links update automatically
+obsidian move file="06 Inbox (Queue)/startup-idea" to="75-99 GE (Galactic Empire)/84 Ventures/"
+```
+
+**2. Agent-safe property management.** Set entity types, statuses, operators without touching YAML by hand:
+```bash
+obsidian property:set file="84 Ventures/new-venture" name="type" value="project"
+obsidian property:set file="84 Ventures/new-venture" name="operator" value="human"
+obsidian property:set file="84 Ventures/new-venture" name="realm" value="digital"
+obsidian property:set file="84 Ventures/new-venture" name="status" value="active"
+```
+
+**3. Vault health in the × Multiply loop.** Add to your weekly review:
+```bash
+# Weekly vault health check
+obsidian orphans          # Notes nobody links to — need connecting or archiving
+obsidian unresolved       # Broken links — need fixing
+obsidian tags counts      # Tag sprawl check — need consolidating?
+```
+
+**4. Scripted bulk operations.** Reclassify, retag, or restructure at scale:
+```bash
+# Reclassify all notes tagged #someday to status=backlog
+obsidian tag tag="#someday" format=paths | while read -r f; do
+  obsidian property:set file="$f" name="status" value="backlog"
+done
+
+# Find all orphan notes and move them to inbox for review
+obsidian orphans format=paths | while read -r f; do
+  obsidian move file="$f" to="06 Inbox (Queue)/"
+done
+```
+
+**5. AI agent skill.** The CLI can serve as an AOP (Agent Operations Procedure) tool — give agents a structured, safe interface to the vault rather than raw file access. An agent that uses `obsidian create` and `obsidian property:set` will never break a wikilink or leave stale metadata.
+
+### VPS Consideration
+
+The CLI currently requires a running Obsidian GUI instance — it's a "remote control," not headless. This means:
+
+- **Mac**: ✅ Full CLI access (Obsidian Desktop runs here)
+- **VPS**: ❌ CLI not available (headless server, no GUI) — agents continue writing files directly via filesystem, and `codex-watch` handles Git sync
+- **iPhone**: ❌ No terminal access — use Obsidian Mobile + Sync for captures
+
+If Obsidian ever ships a headless CLI mode, VPS agents could migrate from direct file writes to CLI operations — eliminating the last "back door" in the pipeline. For now, the VPS `codex-watch` auto-commit flow remains the correct approach for server-side agents.
+
+---
+
 **Start with 4. Grow to 100. Never feel overwhelmed.**
 
 The 100-domain system is the architecture — the full map of your life. But you don't start with the full map. You start with the 4 quadrants and activate domains as your life demands them.
