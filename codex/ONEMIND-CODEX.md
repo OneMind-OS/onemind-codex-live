@@ -24,7 +24,7 @@ One Mind starts where they stop:
 
 - **Structured for AI** — every document has machine-readable frontmatter, typed metadata, and progressive disclosure layers so agents can navigate without reading everything.
 - **Execution built in** — capture and organize are table stakes. One Mind includes *direction*, *execution*, and *multiplication* (compounding feedback) as first-class steps.
-- **Entity taxonomy** — 16 entity types across 5 categories (intent, knowledge, measurement, operator, capability) so the system knows WHAT something is, not just where it's filed.
+- **Entity taxonomy** — 17 entity types across 5 categories (intent, knowledge, measurement, operator, capability) so the system knows WHAT something is, not just where it's filed.
 - **Tool-agnostic** — the vault is plain Markdown in folders. Obsidian today, whatever tomorrow. Your system outlives any app.
 
 The result: a life OS that a human steers and AI agents execute against — together forming one mind.
@@ -91,7 +91,7 @@ Every piece of information flows through five stages:
 | Covers entire life | ❌ | ❌ | ❌ | ✅ |
 | AI can navigate | ❌ | ❌ | ❌ | ✅ |
 | AI can execute | ❌ | ❌ | ❌ | ✅ |
-| Entity type system | ❌ | ❌ | ❌ | ✅ (16 types) |
+| Entity type system | ❌ | ❌ | ❌ | ✅ (17 types) |
 | Built-in metrics | ❌ | ❌ | ❌ | ✅ |
 | Compounding feedback | ❌ | ❌ | ❌ | ✅ |
 | Tool-agnostic | ✅ | ❌ | ❌ | ✅ |

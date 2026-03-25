@@ -28,7 +28,7 @@ Every file should open with frontmatter between `---` markers:
 ---
 id: {domain-code}-{YYYYMMDD}-{slug}
 title: "Human-Readable Title"
-type: goal | project | task | note | decision | sop | doctrine | reference | metric | review | human | agent | robot | drone | skill | tool
+type: goal | project | task | note | decision | sop | aop | doctrine | reference | metric | review | human | agent | robot | drone | skill | tool
 status: active | draft | archived | deprecated
 created: YYYY-MM-DD
 modified: YYYY-MM-DD
@@ -74,7 +74,7 @@ ai_summary: "Morning routine checklist: 6am wake, workout, journaling, review To
 
 ## Entity Types (Document Types)
 
-The CODEX entity system has 16 types across 5 categories. Use the `type` field in frontmatter.
+The CODEX entity system has 17 types across 5 categories. Use the `type` field in frontmatter.
 
 ### Intent (what you want)
 
@@ -90,7 +90,8 @@ The CODEX entity system has 16 types across 5 categories. Use the `type` field i
 |------|---------|
 | `note` | General knowledge, observations, ideas |
 | `decision` | Choices made — with context, options, and rationale |
-| `sop` | Step-by-step procedures to follow (Standard Operating Procedure) |
+| `sop` | Standard Operating Procedure — human-readable repeatable process |
+| `aop` | Agent Operations Procedure — agent-native execution contract |
 | `doctrine` | Core principles, frameworks, system-level truths |
 | `reference` | External facts, specs, API docs, guides |
 

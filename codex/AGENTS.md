@@ -57,7 +57,7 @@ This approach lets you understand the vault's state from ~5 system files, scan 1
 - **Naming**: lowercase-hyphens for filenames (e.g., `weekly-review-2026-03-19.md`).
 - **Frontmatter**: every document must have YAML frontmatter with at minimum: `title`, `type`, `status`, `created`, `tags`, `ai_summary`.
 - **Templates**: always use templates from `_codex/templates/` when creating new documents. This ensures consistent structure and metadata.
-- **Document types**: See CODEX-FRAMEWORK.md for the full entity taxonomy. Core types: `goal`, `project`, `task`, `note`, `decision`, `sop`, `metric`, `review`, `doctrine`, `reference`, `skill`, `tool`, `agent`, `human`, `robot`, `drone`. Each has its own template.
+- **Document types**: See CODEX-FRAMEWORK.md for the full entity taxonomy. Core types: `goal`, `project`, `task`, `note`, `decision`, `sop`, `aop`, `metric`, `review`, `doctrine`, `reference`, `skill`, `tool`, `agent`, `human`, `robot`, `drone`. Each has its own template.
 
 ---
 

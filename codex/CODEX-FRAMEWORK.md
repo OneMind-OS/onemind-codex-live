@@ -91,26 +91,52 @@ Your inboxes fill up during the week. During your weekly review (× step), you r
 
 ## O — Organize
 
-**Structure is what makes the system navigable — for humans and AI.**
+**Give everything an address so it can be found.**
 
-### The Key Insight
+Organize answers ONE question: **WHERE does this live and WHAT is it?**
 
-Organization is NOT filing. Filing is putting things away and forgetting them. Organizing is giving things an **address** — a quadrant, a domain, a type — so they can be FOUND and ACTED ON.
+Organize does NOT decide priority, ownership, deadlines, or what happens next — that's Direct. Organize is purely about **classification and placement**.
 
-| Item In Inbox | Routing Decision | Destination |
-|--------------|------------------|-------------|
-| "Research protein intake" | Health topic | HP / 27 Body |
-| "Call accountant about LLC" | Business legal | GE / 81 Strategy |
-| "Fix the kitchen sink" | Home maintenance | LE / 50 Home |
-| "New AI tool looks promising" | Tech / tools | UI / 02 Agents |
-| "Birthday party for Aria" | Family / children | LE / 52 Children |
-| "I want to run a marathon" | This is a GOAL, not a note | HP / 27 Body (as goal type) |
+### What Organize Does (and Doesn't Do)
+
+| Organize DOES | Organize DOES NOT |
+|--------------|-------------------|
+| Route to the right quadrant and domain | Decide if it matters |
+| Assign an entity type (goal, note, task, etc.) | Assign who does it |
+| Add frontmatter and tags | Set deadlines or priorities |
+| Make things findable by humans and AI | Define success criteria |
+
+**Think of it this way:** Organize is the librarian. Direct is the general. The librarian files the book on the right shelf. The general decides which book matters and what to do about it.
 
 ### The Three Organizing Actions
 
-1. **Route** — move from inbox to the right domain folder
+1. **Route** — move from inbox to the right quadrant → domain folder
 2. **Type** — assign the entity type (is this a note? a goal? a task? a decision?)
 3. **Tag** — add frontmatter so AI can find it without reading it
+
+### Example: Same Item Through O Then D
+
+```
+CAPTURED: "I should start running again"
+
+O — ORGANIZE:
+   Route:  HP / 27 Body (it's about health)
+   Type:   goal (it's something I want to achieve)
+   Tag:    type/goal, domain/hp, status/draft
+   File:   HP/27-Body/goal-start-running.md
+   ✅ Now it has an address and a type. Organize is done.
+
+D — DIRECT:
+   Priority:  High (doctor said I need to move more)
+   Operator:  Human (I have to do the actual running)
+   Done:      "Run 3x/week for 4 consecutive weeks"
+   Timeline:  Start this Monday, checkpoint in 30 days
+   Breakdown: Create PROJECT "April Running Plan" → TASKS for each run
+   ✅ Now it has ownership, priority, criteria, and a timeline. Direct is done.
+```
+
+**Without Organize**, Direct has nowhere to put things and no types to work with.
+**Without Direct**, Organize creates a beautifully filed system that never takes action.
 
 ### The Four Quadrants
 
@@ -169,13 +195,25 @@ Tags follow a namespace convention:
 
 ## D — Direct
 
-**The command layer. This is what makes CODEX an operating system instead of a filing cabinet.**
+**Decide what matters, who does it, and what "done" looks like.**
 
-Direct is the step that doesn't exist in any prior framework. CODE goes Capture → Organize → Distill → Express. There's no decision point. No delegation. No "who does this?" You just... do it yourself.
+Direct answers a DIFFERENT question than Organize. Organize asked "where does this live?" Direct asks: **"What happens to it?"**
+
+### Organize vs. Direct — The Clear Line
+
+| | O — Organize | D — Direct |
+|---|---|---|
+| **Question** | Where does this live? What is it? | Does it matter? Who does it? When? |
+| **Actions** | Route, type, tag | Prioritize, assign, define done, set deadline |
+| **Metaphor** | Filing a medical chart | Doctor reading the chart and prescribing treatment |
+| **Output** | A classified, findable document | A prioritized, assigned, actionable command |
+| **Who does it** | Often during weekly review or at capture time | During planning sessions and daily prioritization |
+
+**The handoff:** Organize creates well-addressed, typed entities. Direct picks them up and turns them into commands with ownership and deadlines.
 
 **Direct is where you stop being a note-taker and become a commander.**
 
-### The Five Questions
+### The Four Commands
 
 Every item that reaches the Direct step gets answered:
 
@@ -183,16 +221,17 @@ Every item that reaches the Direct step gets answered:
 ┌──────────────────────────────────────────────────────────────────────┐
 │                          D — DIRECT                                  │
 │                                                                      │
-│  1. WHAT MATTERS?    → Priority   (rank it: critical/high/med/low)  │
-│  2. WHO DOES IT?     → Operator   (human / agent / robot / drone)   │
-│  3. WHAT TYPE IS IT? → Entity     (goal / project / task / SOP)     │
-│  4. WHAT IS "DONE"?  → Criteria   (measurable success definition)   │
-│  5. WHEN?            → Timeline   (deadline, cadence, or trigger)   │
+│  1. DOES IT MATTER? → Priority  (critical / high / medium / low)    │
+│  2. WHO DOES IT?    → Operator  (human / agent / robot / drone)     │
+│  3. WHAT IS "DONE"? → Criteria  (measurable success definition)     │
+│  4. WHEN?           → Timeline  (deadline, cadence, or trigger)     │
 │                                                                      │
-│  INPUT:  Organized knowledge sitting in your vault                   │
-│  OUTPUT: Directed work with clear ownership and success criteria     │
+│  INPUT:  Organized entities with addresses and types                 │
+│  OUTPUT: Commanded work with clear ownership and success criteria    │
 └──────────────────────────────────────────────────────────────────────┘
 ```
+
+Note: "What TYPE is it?" is NOT a Direct question — that was handled in Organize. Direct works with already-typed entities.
 
 ### Why "Direct" Beats "Distill"
 
@@ -216,14 +255,16 @@ GOAL    "Run a marathon by December"           ← Long-term outcome
   └── PROJECT  "Q2 Marathon Training Block"    ← Bounded effort toward the goal
         ├── TASK  "Run 5 miles Tuesday"        ← Single action
         ├── TASK  "Book sports massage"        ← Single action
-        └── SOP   "Weekly long run protocol"   ← Repeatable process
+        ├── SOP   "Weekly long run protocol"   ← Repeatable human process
+        └── AOP   "Auto-generate weekly plan"  ← Agent-executed procedure
 ```
 
 Each level can have a different operator:
 - The **Goal** is human-directed (you set the vision)
 - The **Project** might be co-piloted (agent tracks progress, human does the work)
 - Individual **Tasks** can be routed to agents (research, scheduling, analysis)
-- **SOPs** define exactly how repeatable work gets done by any operator
+- **SOPs** define exactly how repeatable work gets done by humans
+- **AOPs** define exactly how repeatable work gets done by agents
 
 ### Routing Table
 
@@ -259,7 +300,19 @@ AI agents can:
 - **Monitor** — watch for changes, alert on conditions, track progress
 - **Maintain** — update documents, clean inboxes, enforce conventions
 
-Agents execute against SOPs (Standard Operating Procedures) documented in the vault. An SOP defines the steps, tools, inputs, outputs, and quality criteria — so an agent knows exactly what "do this task" means.
+Agents execute against **AOPs** (Agent Operations Procedures) documented in the vault. An AOP defines structured inputs, deterministic steps, tools, outputs, error handling, and guardrails — everything an agent needs to run a procedure autonomously.
+
+Humans execute against **SOPs** (Standard Operating Procedures). SOPs are human-readable step-by-step guides. An SOP can be delegated to an agent in a pinch, but AOPs are purpose-built for agent execution.
+
+### SOP vs. AOP
+
+| | SOP (Standard Operating Procedure) | AOP (Agent Operations Procedure) |
+|---|---|---|
+| **Written for** | Humans (with agent delegation possible) | Agents (machine-parseable by design) |
+| **Structure** | Natural language steps, context, judgment calls | Structured inputs, deterministic steps, defined outputs |
+| **Includes** | Purpose, steps, expected outcome, troubleshooting | Trigger, inputs table, tools per step, outputs table, error handling, guardrails |
+| **Autonomy** | Human runs it, may ask agent for help | Agent runs it, escalates to human on exceptions |
+| **Example** | "Weekly grocery shopping" — check fridge, make list, go to store | "Weekly inbox triage" — scan inbox, categorize by type, route to domains, flag unknowns |
 
 ### The Three Execution Modes
 
@@ -354,7 +407,7 @@ CYCLE 52: Multiplied. The system practically runs itself.
 
 ## Entity Taxonomy
 
-One Mind knows WHAT something is, WHO owns it, and WHERE it lives. PARA treats everything as "a note in a folder." Your system has 16 entity types across 5 categories.
+One Mind knows WHAT something is, WHO owns it, and WHERE it lives. PARA treats everything as "a note in a folder." Your system has 17 entity types across 5 categories.
 
 ### The Full Entity System
 
@@ -371,7 +424,8 @@ CODEX ENTITY SYSTEM
 │   ├── decision    — Recorded choice with context + rationale
 │   ├── doctrine    — Core philosophy, non-negotiable truth
 │   ├── reference   — External resource, spec, guide
-│   └── sop         — Standard Operating Procedure (repeatable process)
+│   ├── sop         — Standard Operating Procedure (human-readable repeatable process)
+│   └── aop         — Agent Operations Procedure (agent-native execution contract)
 │
 ├── 📊 MEASUREMENT (how you track)
 │   ├── metric      — Tracked number (weight, revenue, sprint pace)
@@ -393,10 +447,10 @@ CODEX ENTITY SYSTEM
 | CODEX Step | Primary Entities |
 |-----------|------------------|
 | **C — Capture** | `note`, `reference` — raw inputs enter the system |
-| **O — Organize** | All types — assign type, domain, owner, frontmatter |
-| **D — Direct** | `goal` → `project` → `task` (break down intent), assign `operator` |
-| **E — Execute** | `task` + `sop` + `skill` + `tool` — operators run the work |
-| **× — Multiply** | `metric` + `review` — track results, extract lessons, compound value |
+| **O — Organize** | All types — route to domain, assign type, add frontmatter |
+| **D — Direct** | `goal` → `project` → `task` (break down intent), assign `operator`, set priority/deadline |
+| **E — Execute** | `task` + `sop`/`aop` + `skill` + `tool` — operators run the work |
+| **× — Multiply** | `metric` + `review` — track results, refine SOPs/AOPs, compound value |
 
 ### Entity Coordinates
 
@@ -408,11 +462,14 @@ QUADRANT → DOMAIN → ENTITY TYPE
 HP / 27-Body     / goal-run-marathon.md
 HP / 27-Body     / metric-weight.md
 HP / 27-Body     / sop-morning-workout.md
+HP / 27-Body     / aop-generate-weekly-plan.md
 GE / 84-Ventures / project-launch-academy.md
 GE / 84-Ventures / task-setup-stripe.md
 UI / 02-Agents   / agent-legacy.md
 UI / 02-Agents   / skill-research.md
+UI / 09-Automation / aop-inbox-triage.md
 LE / 50-Home     / task-fix-fence.md
+LE / 50-Home     / robot-irrigation-system.md
 LE / 56-Wealth   / note-estate-plan-options.md
 ```
 
@@ -433,7 +490,193 @@ Examples:
 
 ---
 
-## Progressive Activation
+## The CODEX Loop
+
+**This is the most important concept in the entire framework.** CODEX is not a line. It's a loop. And every cycle through the loop multiplies the system's intelligence.
+
+```
+              ┌───────────────────────────────────┐
+              │                                     │
+              ▼                                     │
+         ┌─────────┐                                │
+         │    C     │  Capture                      │
+         │ (input)  │  "Get it in"                  │
+         └────┬─────┘                                │
+              │                                     │
+              ▼                                     │
+         ┌─────────┐                                │
+         │    O     │  Organize                     │
+         │ (route)  │  "Give it an address"         │
+         └────┬─────┘                                │
+              │                                     │
+              ▼                                     │
+         ┌─────────┐                                │
+         │    D     │  Direct                       │
+         │(command) │  "Decide what happens"        │
+         └────┬─────┘                                │
+              │                                     │
+              ▼                                     │
+         ┌─────────┐                                │
+         │    E     │  Execute                      │
+         │ (action) │  "Do the work"                │
+         └────┬─────┘                                │
+              │                                     │
+              ▼                                     │
+         ┌─────────┐                                │
+         │    ×     │  Multiply                     │
+         │(compound)│  "Review, learn, improve"     │
+         └────┬─────┘                                │
+              │                                     │
+              │   New insights, updated priorities,  │
+              │   refined SOPs/AOPs, fresh metrics   │
+              │                                     │
+              └─────────── feed back into C ────────┘
+```
+
+### How the Loop Works in Practice
+
+**Weekly cycle (the core rhythm):**
+
+```
+MONDAY-SATURDAY: The Working Week
+─────────────────────────────────
+C — Capture thoughts, notes, ideas all week (fast, messy, into inboxes)
+O — Quick-route obvious items as you capture them
+D — Daily 5-min priority check: what matters today? Who's doing it?
+E — Humans work, agents run AOPs, tasks get completed
+
+SUNDAY: The × Day (30 minutes)
+────────────────────────────────
+× — Process inboxes (route or archive everything)
+× — Review what got done vs. what was planned
+× — Check metrics (are numbers moving right?)
+× — Extract lessons (what worked? what broke?)
+× — Set next week's priorities (feeds back into D)
+× — Capture new insights from the review (feeds back into C)
+    ↕
+    The loop restarts. But now the system knows more.
+```
+
+**Monthly cycle (zoom out):**
+
+```
+× — Read the last 4 weekly reviews → see patterns
+× — Quadrant health check → is any area of life starving?
+× — SOP/AOP audit → are procedures working or need refinement?
+× — Goal alignment → are daily actions serving quarterly goals?
+× — Capture: new goals, updated priorities, refined procedures
+    ↕
+    The loop restarts at a higher level.
+```
+
+**Quarterly cycle (zoom way out):**
+
+```
+× — Read all monthly reviews → see the big picture
+× — Major decision audit → are past decisions holding up?
+× — Long-term project check → on track or need recalibration?
+× — Set OKRs / themes for next quarter
+× — Capture: strategic insights, updated identity, new doctrines
+    ↕
+    The loop restarts with fresh strategic clarity.
+```
+
+### The Multiplication Effect
+
+Here's what compounding looks like over time:
+
+```
+WEEK 1:   You capture 20 items. Organize 15. Direct 10. Execute 5.
+          × Review: "I'm over-capturing and under-executing."
+          LESSON → Be more selective at Capture. Write clearer tasks at Direct.
+
+WEEK 4:   Capture 12 (more selective). Organize 12. Direct 10. Execute 8.
+          × Review: "Inbox triage takes 30 min. Agent could do this."
+          LESSON → Write an AOP for inbox triage.
+
+WEEK 8:   Agent handles inbox triage (AOP). You save 30 min/week.
+          × Review: "Agent triage is 85% accurate. Needs better type detection."
+          LESSON → Refine AOP with clearer type rules.
+
+WEEK 12:  Agent triage is 95% accurate. You barely touch inboxes.
+          × Review: "System handles 40% of Organize step automatically."
+          LESSON → What ELSE can I delegate?
+
+WEEK 52:  70% of Organize and 50% of Execute run through agents/automation.
+          You spend most of your time on Direct (strategy) and × (review).
+          The system multiplied its own intelligence 52 times.
+```
+
+**That's the loop. That's why × matters. That's why CODEX compounds.**
+
+---
+
+## Mobile Access
+
+**Your codex lives on your computer as files and folders. Here's how to access it on mobile without breaking Git.**
+
+### Recommended Setup: Obsidian Mobile + Git Separation
+
+The cleanest approach separates mobile sync from Git:
+
+| Device | Tool | Sync Method |
+|--------|------|-------------|
+| **Desktop/Laptop** | Obsidian + Git | Git push/pull (source of truth) |
+| **iPhone/iPad** | Obsidian Mobile | iCloud sync |
+| **Android** | Obsidian Mobile | Google Drive or Syncthing |
+
+**How it works:**
+1. Your vault folder lives inside iCloud Drive (Mac) or Google Drive
+2. Obsidian Desktop opens it from the cloud folder — you still use Git from terminal/VS Code
+3. Obsidian Mobile opens the same cloud folder — changes sync automatically
+4. Git only runs on desktop — mobile never touches Git directly
+
+**This avoids merge conflicts** because iCloud/Google Drive handles file sync, and Git handles version control separately. One person, one device editing at a time.
+
+### Setup Steps (iPhone/iPad + Mac)
+
+1. **Move your vault into iCloud Drive:**
+   ```
+   ~/Library/Mobile Documents/iCloud~md~obsidian/Documents/your-codex/
+   ```
+   Or simply open Obsidian → Settings → About → move vault to iCloud.
+
+2. **Open the vault in Obsidian Mobile** — it auto-discovers iCloud vaults.
+
+3. **Keep Git on desktop only:**
+   - Your desktop Git repo points to the same iCloud folder
+   - Commit, push, pull only from desktop
+   - Mobile just reads/writes files — iCloud handles the sync
+
+### Setup Steps (Android)
+
+1. **Use Obsidian Sync ($4/month)** — simplest option, native to Obsidian
+2. **Or use Syncthing (free)** — sync the vault folder between desktop and Android
+3. **Or use Termux + Git** — for power users who want Git on Android
+
+### Mobile Capture Rules
+
+To avoid conflicts, follow these rules on mobile:
+
+1. **Mobile is for CAPTURE only** — write quick notes, tasks, ideas
+2. **Always capture to the inbox** — don't try to organize on mobile
+3. **Never edit the same file on mobile and desktop simultaneously**
+4. **Process inbox on desktop** — routing, organizing, and directing happen at the computer
+
+### Quick-Capture Workflow (Mobile)
+
+```
+Phone buzzes with an idea →
+  Open Obsidian Mobile →
+    New note in inbox (use note or task template) →
+      Write 2-3 sentences →
+        Close app →
+          Sort it Sunday at your computer
+```
+
+This keeps mobile friction near zero and Git conflicts at zero.
+
+---
 
 **Start with 4. Grow to 100. Never feel overwhelmed.**
 

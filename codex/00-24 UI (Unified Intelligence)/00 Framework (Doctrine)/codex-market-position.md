@@ -58,7 +58,7 @@ Every other framework was designed for humans alone and tries to retrofit AI. CO
 
 ### 2. The Full Pipeline: Method + Structure + Intelligence + Execution + Measurement
 - **METHOD:** CODEX (Capture → Organize → Direct → Execute → × Multiply)
-- **STRUCTURE:** 4 quadrants, 100 domains (progressive activation), 16 entity types
+- **STRUCTURE:** 4 quadrants, 100 domains (progressive activation), 17 entity types
 - **INTELLIGENCE:** `_codex/` (skills, templates, profiles, pinned system context)
 - **EXECUTION:** AI agents running skills from portable markdown
 - **MEASUREMENT:** × Multiply step — metrics, reviews, intelligence scores (HPI, LEI, GEI, UI), review cadences
