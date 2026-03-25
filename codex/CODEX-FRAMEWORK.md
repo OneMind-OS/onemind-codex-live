@@ -615,48 +615,57 @@ WEEK 52:  70% of Organize and 50% of Execute run through agents/automation.
 
 **Your codex lives on your computer as files and folders. Here's how to access it on mobile without breaking Git.**
 
-### Recommended Setup: Obsidian Mobile + Git Separation
+### The Three Sync Options
 
-The cleanest approach separates mobile sync from Git:
+| Method | Cost | Best For | Pros | Cons |
+|--------|------|----------|------|------|
+| **iCloud** | Free | Mac + iPhone/iPad users | Zero setup, free, automatic | Apple-only, Apple holds encryption keys |
+| **Obsidian Sync** | $4/mo | Cross-platform, or if you want encryption | End-to-end encrypted, version history, conflict resolution | Costs money, another subscription |
+| **Google Drive / Syncthing** | Free | Android users | Free, cross-platform | Manual setup, no built-in conflict resolution |
 
-| Device | Tool | Sync Method |
-|--------|------|-------------|
-| **Desktop/Laptop** | Obsidian + Git | Git push/pull (source of truth) |
-| **iPhone/iPad** | Obsidian Mobile | iCloud sync |
-| **Android** | Obsidian Mobile | Google Drive or Syncthing |
+### Recommended: iCloud (Mac + iPhone Users)
+
+If your vault is already on your Mac and you have an iPhone, iCloud is the simplest path — free, zero-config, automatic.
 
 **How it works:**
-1. Your vault folder lives inside iCloud Drive (Mac) or Google Drive
-2. Obsidian Desktop opens it from the cloud folder — you still use Git from terminal/VS Code
-3. Obsidian Mobile opens the same cloud folder — changes sync automatically
+1. Your vault folder lives inside iCloud Drive on your Mac
+2. Obsidian Desktop opens it from the iCloud folder — you still use Git from terminal/VS Code
+3. Obsidian Mobile on your iPhone opens the same iCloud folder — changes sync automatically
 4. Git only runs on desktop — mobile never touches Git directly
 
-**This avoids merge conflicts** because iCloud/Google Drive handles file sync, and Git handles version control separately. One person, one device editing at a time.
+**This avoids merge conflicts** because iCloud handles file sync and Git handles version control separately.
 
-### Setup Steps (iPhone/iPad + Mac)
-
-1. **Move your vault into iCloud Drive:**
+**Setup:**
+1. Open Obsidian Desktop → Settings → About → move vault to iCloud (or it may already be there)
    ```
    ~/Library/Mobile Documents/iCloud~md~obsidian/Documents/your-codex/
    ```
-   Or simply open Obsidian → Settings → About → move vault to iCloud.
+2. Open Obsidian Mobile on iPhone — it auto-discovers iCloud vaults
+3. Keep Git on desktop only — commit, push, pull from your Mac
 
-2. **Open the vault in Obsidian Mobile** — it auto-discovers iCloud vaults.
+### Alternative: Obsidian Sync ($4/month)
 
-3. **Keep Git on desktop only:**
-   - Your desktop Git repo points to the same iCloud folder
-   - Commit, push, pull only from desktop
-   - Mobile just reads/writes files — iCloud handles the sync
+Choose Obsidian Sync over iCloud when:
+- You use **Android + Mac** (iCloud doesn't work on Android)
+- You want **end-to-end encryption** (iCloud is encrypted but Apple holds keys; Obsidian Sync uses zero-knowledge encryption)
+- You want **version history inside Obsidian** (though Git already gives you this)
+- You want **built-in conflict resolution** if you accidentally edit the same file on two devices
 
-### Setup Steps (Android)
+**Setup:**
+1. Subscribe to Obsidian Sync in the app
+2. Enable Sync on desktop and mobile — it handles everything
 
-1. **Use Obsidian Sync ($4/month)** — simplest option, native to Obsidian
-2. **Or use Syncthing (free)** — sync the vault folder between desktop and Android
-3. **Or use Termux + Git** — for power users who want Git on Android
+### Alternative: Android Users
+
+1. **Obsidian Sync ($4/mo)** — simplest, works everywhere
+2. **Syncthing (free)** — open-source sync between desktop and Android
+3. **Termux + Git** — power users who want Git directly on Android
+
+### The Key Rule: Git Stays on Desktop
+
+No matter which sync method you choose, **Git only runs on your computer**. Mobile is for reading and quick captures. Desktop is for commits, pushes, and version control.
 
 ### Mobile Capture Rules
-
-To avoid conflicts, follow these rules on mobile:
 
 1. **Mobile is for CAPTURE only** — write quick notes, tasks, ideas
 2. **Always capture to the inbox** — don't try to organize on mobile
