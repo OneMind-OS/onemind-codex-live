@@ -22,7 +22,7 @@ ai_summary: "How to process the inbox and route content — the O step in CODEX"
 
 ## Steps
 
-1. **Open `00-24 UI/06 Inbox (Queue)/`**
+1. **Open `00-24 IO/06 Inbox (Queue)/`**
    List all files. For each one:
 
 2. **Read the title and frontmatter**
@@ -35,10 +35,10 @@ ai_summary: "How to process the inbox and route content — the O step in CODEX"
 
    | Content type | Destination |
    |-------------|-------------|
-   | AI agents, tools, memory | `00-24 UI/02 Agents/` |
-   | Protocols, SOPs, procedures | `00-24 UI/03 Protocols/` |
-   | Infrastructure, servers, APIs | `00-24 UI/08 Infrastructure/` |
-   | Automation, workflows | `00-24 UI/09 Automation/` |
+   | AI agents, tools, memory | `00-24 IO/02 Agents/` |
+   | Protocols, SOPs, procedures | `00-24 IO/03 Protocols/` |
+   | Infrastructure, servers, APIs | `00-24 IO/08 Infrastructure/` |
+   | Automation, workflows | `00-24 IO/09 Automation/` |
    | Health, body, fitness | `25-49 HP/27 Body/` |
    | Personal finance | `25-49 HP/30 Finance/` |
    | Relationships, contacts | `25-49 HP/32 Relationships/` |

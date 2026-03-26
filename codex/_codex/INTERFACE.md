@@ -28,7 +28,7 @@ This is a **One Mind Codex** — a structured knowledge base in plain Markdown, 
 ## How It's Organized — 4 Quadrants
 
 ```text
-00-24  UI  — Unified Intelligence      Tech, AI, infrastructure, architecture
+00-24  IO  — Intelligent Operations      Tech, AI, infrastructure, architecture
 25-49  HP  — Holistic Performance      Health, money, identity, skills, relationships
 50-74  LE  — Legacy Evolution          Family, home, children, estate
 75-99  GE  — Generational Entrepreneurship  Business, ventures, wealth
@@ -45,9 +45,9 @@ Each quadrant contains **numbered domain folders**. Each domain folder has a `RE
 | Need | Where to go |
 |------|------------|
 | **Brand new? Start here** | [`QUICK-START.md`](../QUICK-START.md) — 30-minute guided setup |
-| Starting fresh | `00-24 UI/00 Framework (Doctrine)/README.md` |
-| Daily log | `_codex/templates/daily.md` → save to your HP or UI domain |
-| Capture something fast | Drop it in `00-24 UI/06 Inbox (Queue)/` |
+| Starting fresh | `00-24 IO/00 Framework (Doctrine)/README.md` |
+| Daily log | `_codex/templates/daily.md` → save to your HP or IO domain |
+| Capture something fast | Drop it in `00-24 IO/06 Inbox (Queue)/` |
 | Set a goal | `_codex/templates/goal.md` |
 | Track a task | `_codex/templates/task.md` |
 | Make a decision record | `_codex/templates/decision.md` |

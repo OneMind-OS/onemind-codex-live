@@ -13,7 +13,7 @@ ai_summary: "Decision: {what was chosen and why, in ≤15 words}"
 # Decision: {Title}
 
 <!-- Save in the domain most affected by this decision.
-     e.g. choosing an AI provider → UI/02 Agents/, choosing a home → LE/50 Home/ -->
+     e.g. choosing an AI provider → IO/02 Agents/, choosing a home → LE/50 Home/ -->
 
 ## Context
 

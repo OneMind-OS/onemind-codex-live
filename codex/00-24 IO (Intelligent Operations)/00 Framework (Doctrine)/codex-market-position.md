@@ -61,7 +61,7 @@ Every other framework was designed for humans alone and tries to retrofit AI. CO
 - **STRUCTURE:** 4 quadrants, 100 domains (progressive activation), 17 entity types
 - **INTELLIGENCE:** `_codex/` (skills, templates, profiles, pinned system context)
 - **EXECUTION:** AI agents running skills from portable markdown
-- **MEASUREMENT:** × Multiply step — metrics, reviews, intelligence scores (HPI, LEI, GEI, UI), review cadences
+- **MEASUREMENT:** × Multiply step — metrics, reviews, intelligence scores (HPI, LEI, GEI, IOI), review cadences
 
 Nobody else has all five. GTD has method only. PARA has structure only. Letta has intelligence only.
 
@@ -73,7 +73,7 @@ Four quadrants covering your ENTIRE existence:
 - **HP (Holistic Performance):** Health, identity, finance, skills, relationships
 - **LE (Legacy Evolution):** Family, home, marriage, children, heritage, estate
 - **GE (Generational Entrepreneurship):** Business, ventures, revenue, strategy
-- **UI (Unified Intelligence):** The coordination layer — AI, infrastructure, automation
+- **IO (Intelligent Operations):** The coordination layer — AI, infrastructure, automation
 
 GTD is task-scope. PARA is file-scope. CODEX is life-scope.
 

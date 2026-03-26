@@ -27,7 +27,7 @@ The word "generational" is intentional. This isn't about quick wins. It's about 
 
 ```text
 GE = The mission (output + empire + legacy)
-UI = The brain
+IO = The brain
 HP = The person executing it
 LE = The home base that sustains the mission
 ```

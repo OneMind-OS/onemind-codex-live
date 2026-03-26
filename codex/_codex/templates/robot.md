@@ -16,7 +16,7 @@ ai_summary: "Robot: {name} — {what it does in ≤10 words}"
 <!-- Robots are physical automation devices — smart home, CNC machines, IoT sensors,
      security systems, irrigation controllers, etc.
      Save in the domain where this device operates.
-     e.g. irrigation system → LE/50 Home/, security camera → UI/11 Security/ -->
+     e.g. irrigation system → LE/50 Home/, security camera → IO/11 Security/ -->
 
 ## Device Info
 

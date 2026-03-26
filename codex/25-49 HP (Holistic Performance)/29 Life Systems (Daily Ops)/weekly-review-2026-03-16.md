@@ -49,7 +49,7 @@ Major infrastructure week. Finished restructuring the codex from the old PARA-ba
 
 ## Quadrant Check
 
-- **UI (Tech/AI)**: Strong — all agents deployed, codex migrated
+- **IO (Tech/AI)**: Strong — all agents deployed, codex migrated
 - **HP (Self)**: Good — fitness on track, need more capture discipline
 - **LE (Family)**: Steady — Sunday dinner was great, calendar integration needed
 - **GE (Business)**: Starting — Empire agent live, need content strategy for launch

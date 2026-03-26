@@ -28,7 +28,7 @@ ai_summary: "How to bootstrap a new codex vault or onboard an AI agent to an exi
 ```text
 codex/
 ├── _codex/                  ← Copy this folder from the template
-├── 00-24 UI (Unified Intelligence)/README.md
+├── 00-24 IO (Intelligent Operations)/README.md
 ├── 25-49 HP (Holistic Performance)/README.md
 ├── 50-74 LE (Legacy Evolution)/README.md
 ├── 75-99 GE (Generational Entrepreneurship)/README.md

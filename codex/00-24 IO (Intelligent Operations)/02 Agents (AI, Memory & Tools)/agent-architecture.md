@@ -24,8 +24,8 @@ One general-purpose AI agent can't do everything well. Instead, I run a **centra
 | **Eden** | LE | Food growing, agriculture, sustainability |
 | **Empire** | GE 75-84 | Business strategy, wealth building |
 | **Haven** | LE 50-58 | Home, family, estate management |
-| **Guardian** | UI 11 + HP 31 + LE 57 | Security, legal, protection |
-| **Grid** | UI 00-12 | Infrastructure, DevOps, automation |
+| **Guardian** | IO 11 + HP 31 + LE 57 | Security, legal, protection |
+| **Grid** | IO 00-12 | Infrastructure, DevOps, automation |
 | **Trinity** | GE 75 + Community | Community building, public presence |
 
 ## How They Communicate

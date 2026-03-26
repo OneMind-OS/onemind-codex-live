@@ -54,7 +54,7 @@ That's it. Four buckets. When something comes into your life, you ask **one ques
 Open your vault in Obsidian (or any text editor). You'll see four folders:
 
 ```
-00-24 UI (Unified Intelligence)/    ← 🧠 TECH & AI
+00-24 IO (Intelligent Operations)/    ← 🧠 TECH & AI
 25-49 HP (Holistic Performance)/    ← 💪 YOU
 50-74 LE (Legacy Evolution)/        ← 🏡 FAMILY
 75-99 GE (Generational Entrepreneurship)/ ← 👑 BUSINESS

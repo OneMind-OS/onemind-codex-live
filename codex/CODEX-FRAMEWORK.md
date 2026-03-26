@@ -198,7 +198,7 @@ D — DIRECT:
 
 | ID Range | Quadrant | Domain |
 |----------|----------|--------|
-| 00–24 | **UI** — Unified Intelligence | Technology, AI, infrastructure |
+| 00–24 | **IO** — Intelligent Operations | Technology, AI, infrastructure |
 | 25–49 | **HP** — Holistic Performance | Health, skills, personal growth |
 | 50–74 | **LE** — Legacy Evolution | Family, home, estate |
 | 75–99 | **GE** — Generational Entrepreneurship | Business, ventures, wealth |
@@ -521,9 +521,9 @@ HP / 27-Body     / sop-morning-workout.md
 HP / 27-Body     / aop-generate-weekly-plan.md
 GE / 84-Ventures / project-launch-academy.md
 GE / 84-Ventures / task-setup-stripe.md
-UI / 02-Agents   / agent-legacy.md
-UI / 02-Agents   / skill-research.md
-UI / 09-Automation / aop-inbox-triage.md
+IO / 02-Agents   / agent-legacy.md
+IO / 02-Agents   / skill-research.md
+IO / 09-Automation / aop-inbox-triage.md
 LE / 50-Home     / task-fix-fence.md
 LE / 50-Home     / robot-irrigation-system.md
 LE / 56-Wealth   / note-estate-plan-options.md
@@ -1163,7 +1163,7 @@ The 100-domain system is the architecture — the full map of your life. But you
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  UI                  HP                 LE              GE      │
+│  IO                  HP                 LE              GE      │
 │  Tech & AI           You & Health       Family          Business│
 │  (your tools)        (your body)        (your people)   (your $)│
 └─────────────────────────────────────────────────────────────────┘
@@ -1171,7 +1171,7 @@ The 100-domain system is the architecture — the full map of your life. But you
 "Drop it in the right quadrant. That's it."
 ```
 
-On your first day, you don't think about domains at all. You see 4 buckets. Captured something about your health? Drop it in HP. Business idea? GE. Server configuration? UI. Family matter? LE.
+On your first day, you don't think about domains at all. You see 4 buckets. Captured something about your health? Drop it in HP. Business idea? GE. Server configuration? IO. Family matter? LE.
 
 This is **simpler than PARA** — PARA asks you to decide between Projects, Areas, Resources, and Archives (confusing boundaries). Quadrants are obvious life domains.
 
@@ -1182,7 +1182,7 @@ After a few days of capturing, patterns emerge. Activate only the domains you're
 ```
 STARTER KIT (suggested — customize to your life):
 
-UI:  00 Framework, 02 Agents, 06 Inbox
+IO:  00 Framework, 02 Agents, 06 Inbox
 HP:  25 Identity, 27 Body, 29 Life Systems, 30 Finance
 LE:  50 Home, 52 Children
 GE:  75 Brand, 81 Strategy

@@ -27,7 +27,7 @@ While HP is about optimizing yourself, LE is about the world you're creating *fo
 
 ```text
 LE = The home base (structure + people + roots)
-UI = The brain
+IO = The brain
 HP = The person
 GE = The mission
 ```

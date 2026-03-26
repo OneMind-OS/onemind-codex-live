@@ -1,5 +1,5 @@
 ---
-id: ui-02-readme
+id: io-02-readme
 title: "Agents (AI, Memory & Tools)"
 type: index
 status: active

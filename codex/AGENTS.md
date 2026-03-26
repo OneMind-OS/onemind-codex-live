@@ -20,7 +20,7 @@ This is a **One Mind Codex vault** — a structured knowledge base built with th
 
 | ID Range | Quadrant | Domain |
 |----------|----------|--------|
-| 00–24 | **UI** — Unified Intelligence | Technology, AI, infrastructure |
+| 00–24 | **IO** — Intelligent Operations | Technology, AI, infrastructure |
 | 25–49 | **HP** — Holistic Performance | Health, skills, personal growth |
 | 50–74 | **LE** — Legacy Evolution | Family, home, estate |
 | 75–99 | **GE** — Generational Entrepreneurship | Business, ventures, wealth |

@@ -16,7 +16,7 @@ ai_summary: "Tool: {name} — {what it does in ≤10 words}"
 <!-- Tools are specific software or hardware in your ecosystem.
      Skills define WHAT to do. Tools define WITH WHAT.
      Save in the domain where this tool is primarily used.
-     e.g. Obsidian → UI/02 Agents/, 3D printer → LE/50 Home/ or GE/79 Technology/ -->
+     e.g. Obsidian → IO/02 Agents/, 3D printer → LE/50 Home/ or GE/79 Technology/ -->
 
 ## What It Is
 

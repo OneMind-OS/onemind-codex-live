@@ -14,7 +14,7 @@ ai_summary: "Agent: {name} — {primary role in ≤10 words}"
 # {Agent Name}
 
 <!-- Agent profiles define who an AI agent is, what it does, and how it operates.
-     Save in UI/02 Agents/ — all agent profiles live here.
+     Save in IO/02 Agents/ — all agent profiles live here.
      This file is loaded when the agent starts a session. -->
 
 ## Identity

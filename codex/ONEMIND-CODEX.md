@@ -105,11 +105,11 @@ CODEX isn't better at note-taking. It's a different category — a **life operat
 
 One Mind divides life into four quadrants, each spanning 25 domain numbers:
 
-### 🧠 UI — Unified Intelligence (00–24)
+### 🧠 IO — Intelligent Operations (00–24)
 
 **The Brain.** Technology, AI, infrastructure, architecture. Everything that powers the system itself.
 
-This is where your AI agents live, your tools are documented, your infrastructure is mapped. If it's about building and maintaining the machine — it's UI.
+This is where your AI agents live, your tools are documented, your infrastructure is mapped. If it's about building and maintaining the machine — it's IO.
 
 *Domains include: System Core, Security, AI Agents, Development, Data, Networking, Automation.*
 
@@ -152,7 +152,7 @@ your-codex/
 │   ├── templates/              ← Document templates for every type
 │   ├── profiles/               ← Review and performance profiles
 │   └── skills/                 ← Agent skill definitions
-├── 00-24 UI/                   ← 🧠 Unified Intelligence
+├── 00-24 IO/                   ← 🧠 Intelligent Operations
 ├── 25-49 HP/                   ← 💪 Holistic Performance
 ├── 50-74 LE/                   ← 🏡 Legacy Evolution
 ├── 75-99 GE/                   ← 👑 Generational Entrepreneurship

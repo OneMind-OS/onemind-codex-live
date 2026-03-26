@@ -18,7 +18,7 @@ ai_summary: "Monthly review protocol — 1st of month, 60 min, full quadrant che
 
 - [ ] Read all 4 weekly reviews from last month
 - [ ] Fill in monthly `_codex/templates/review.md` → save to `HP/29 Life Systems/Reviews/`
-- [ ] Complete the Quadrant Check (one paragraph per quadrant: UI / HP / LE / GE)
+- [ ] Complete the Quadrant Check (one paragraph per quadrant: IO / HP / LE / GE)
 - [ ] Review personal finance metrics (see `HP/30 Finance/`)
 - [ ] Review health metrics (see `HP/27 Body/`)
 - [ ] Archive completed projects, update status on stale ones

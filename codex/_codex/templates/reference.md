@@ -16,7 +16,7 @@ ai_summary: "Reference: {what this resource covers in ≤15 words}"
 <!-- References are external resources, specs, API docs, guides, or any information
      you didn't create but want to remember and find later.
      Save in the domain where this reference is most useful.
-     e.g. API docs → UI/10 Development/, tax guide → HP/30 Finance/ -->
+     e.g. API docs → IO/10 Development/, tax guide → HP/30 Finance/ -->
 
 ## Source
 

@@ -62,7 +62,7 @@ Capture → Organize → Direct → Execute → × Multiply
 The vault is divided into 4 quadrants covering every domain of life:
 
 ```text
-00-24  UI  — Unified Intelligence   (AI, tech, infrastructure)
+00-24  IO  — Intelligent Operations   (AI, tech, infrastructure)
 25-49  HP  — Holistic Performance   (health, money, identity, skills)
 50-74  LE  — Legacy Evolution       (family, home, estate)
 75-99  GE  — Generational Entrepreneurship (business, ventures, wealth)
@@ -113,7 +113,7 @@ codex-live/
 │   ├── system/                      ← Always-loaded context (pinned)
 │   └── profiles/                    ← Review cadence profiles
 │
-├── 00-24 UI (Unified Intelligence)/ ← AI, tech, infrastructure
+├── 00-24 IO (Intelligent Operations)/ ← AI, tech, infrastructure
 │   ├── 00 Framework (Doctrine)/     ← Core principles
 │   ├── 01 Command (Dashboard)/      ← Navigation + dashboards
 │   ├── 02 Agents (AI & Tools)/      ← Agent configs, memory

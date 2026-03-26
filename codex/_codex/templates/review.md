@@ -42,7 +42,7 @@ ai_summary: "Review for {period} — wins, lessons, priorities"
 
 ## Quadrant Check
 
-- **UI (Tech/AI)**: {brief status — what's happening in your tech/AI domain}
+- **IO (Tech/AI)**: {brief status — what's happening in your tech/AI domain}
 - **HP (Self)**: {brief status — health, money, relationships, energy}
 - **LE (Family)**: {brief status — home, family, relationships}
 - **GE (Business)**: {brief status — work, ventures, brand, money}

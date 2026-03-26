@@ -14,7 +14,7 @@ ai_summary: "Doctrine: {core principle in ≤15 words}"
 
 <!-- Doctrines are core principles, philosophies, and non-negotiable truths.
      These are the beliefs and frameworks that govern how you operate.
-     Save in the relevant domain — system doctrines go in UI/00 Framework/.
+     Save in the relevant domain — system doctrines go in IO/00 Framework/.
      Doctrines rarely change. When they do, it's a big deal. -->
 
 ## The Principle

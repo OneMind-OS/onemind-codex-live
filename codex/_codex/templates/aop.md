@@ -17,7 +17,7 @@ ai_summary: "AOP: {what this agent procedure does in ≤10 words}"
      Unlike SOPs (which are human-readable and may be delegated to agents), AOPs are
      agent-native: structured inputs, deterministic steps, machine-parseable outputs.
      Save in the domain where this operation lives.
-     e.g. inbox triage → UI/09 Automation/, market research → GE/81 Strategy/ -->
+     e.g. inbox triage → IO/09 Automation/, market research → GE/81 Strategy/ -->
 
 ## Purpose
 
