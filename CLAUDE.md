@@ -193,9 +193,8 @@ npx quartz build -d codex --serve
 
 These exist in the PRIVATE vault (`onemind-codex`) and may affect consistency:
 
-1. CLAUDE.md in private vault still references old naming ("eXamine" instead of "× Multiply")
-2. Some files in private vault still use "quadrant" terminology
-3. 12 Dependabot security vulnerabilities flagged on this repo (npm dependencies)
+1. 12 Dependabot security vulnerabilities flagged on this repo (npm dependencies)
+2. Private vault has structural issues: duplicate domain 03, missing domain 82, gaps at 06-08
 4. Private vault has structural issues (duplicate domains, missing domain 82, etc.)
 
 ---
