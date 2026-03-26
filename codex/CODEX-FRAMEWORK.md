@@ -3,7 +3,7 @@ title: "THE CODEX FRAMEWORK"
 type: doctrine
 status: active
 created: 2026-03-19
-updated: 2026-03-24
+updated: 2026-03-26
 owner: zeus
 tags: [type/doctrine, status/active]
 ai_summary: "Deep dive on the CODEX method — Capture, Organize, Direct, Execute, × Multiply — with entity taxonomy, progressive activation, and the full system design"
@@ -1192,6 +1192,285 @@ The framework is the skeleton. Your content is the muscle.
 The loop compounds. Every cycle makes the system smarter, the agent context richer, your SOPs sharper, and your decisions better-informed. That's the multiplication effect.
 
 That's the CODEX.
+
+---
+
+## Supercharging the Codex — Plugin Stack
+
+The private codex runs on a near-stock Obsidian installation. These plugins transform it from a file system into a queryable, automated life operating system — mapped directly to the CODEX method.
+
+### Tier 1 — Install Now (Transforms the Vault)
+
+#### Dataview — The Database Layer
+
+**CODEX step:** All steps, especially × Multiply
+
+Dataview turns your 100 domains into a **queryable database**. Every note with frontmatter becomes a row you can filter, sort, and display. This is the single biggest upgrade to the codex.
+
+**What it unlocks:**
+- Query all 17 entity types by `type`, `status`, `operator`, `realm`
+- Build live dashboards that update automatically
+- Surface orphan notes, stale goals, overdue tasks across all quadrants
+- Power the × Multiply loop with data instead of guesswork
+
+**Install:** Settings → Community Plugins → Browse → search "Dataview" → Install → Enable
+
+#### Templater — Dynamic Templates
+
+**CODEX step:** Capture
+
+You already have 19 templates. Templater makes them **dynamic** — auto-fill dates, auto-set frontmatter based on the folder you're in, run JavaScript for custom logic.
+
+**What it unlocks:**
+- `{{date}}` and `{{time}}` auto-fill in templates
+- `tp.file.title` auto-inserts the file name into frontmatter
+- Folder-based template triggers — create a file in `01 Projects/` and the project template auto-applies
+- JavaScript hooks for custom automation
+
+**Install:** Settings → Community Plugins → Browse → search "Templater" → Install → Enable
+
+#### QuickAdd — One-Key Capture
+
+**CODEX step:** Capture
+
+One hotkey = new entity with the right template and frontmatter. Eliminates all friction from the Capture step.
+
+**Recommended hotkeys:**
+- `Cmd+Shift+G` → New Goal (auto-fills `type: goal`, `status: draft`, `operator: human`)
+- `Cmd+Shift+T` → New Task (auto-fills `type: task`, places in inbox)
+- `Cmd+Shift+N` → Quick Note (timestamp + inbox placement)
+- `Cmd+Shift+A` → New AOP (agent operations procedure template)
+
+**Install:** Settings → Community Plugins → Browse → search "QuickAdd" → Install → Enable
+
+#### Tasks — Vault-Wide Task Tracking
+
+**CODEX step:** Execute
+
+Tracks tasks with due dates, priorities, recurrence, and completion status across the entire vault. Combined with Dataview, you can query "show all tasks due this week across all 100 domains."
+
+**What it unlocks:**
+- Due dates: `📅 2026-04-01`
+- Priorities: `⏫ High`, `🔼 Medium`, `🔽 Low`
+- Recurrence: `🔁 every week`
+- Global task queries that span all quadrants and domains
+
+**Install:** Settings → Community Plugins → Browse → search "Tasks" → Install → Enable
+
+### Tier 2 — Install Week 2 (Powers the Loop)
+
+#### Periodic Notes — Automated Review Cycles
+
+**CODEX step:** × Multiply
+
+Auto-creates weekly, monthly, and quarterly review notes from templates. This IS your CODEX loop — automated. Set it up once and every Sunday a fresh review template appears with the right structure.
+
+**Configuration:**
+- Weekly template → triggers every Sunday (the × Multiply weekly cycle)
+- Monthly template → triggers on the 1st (monthly multiplication)
+- Quarterly template → triggers on quarter boundaries (strategic review)
+
+#### Calendar — Visual Timeline
+
+**CODEX step:** × Multiply
+
+Sidebar calendar widget. Click any date → see that day's daily note. Visual timeline of your entire codex history. Pairs with Periodic Notes for navigating your review cycles.
+
+#### Kanban — Visual Project Boards
+
+**CODEX step:** Direct
+
+Markdown-backed Kanban boards (Trello-style). Drag cards between columns: backlog → active → done. See all active projects across quadrants in one visual board.
+
+**Use cases:**
+- Project status board per quadrant
+- Goal tracking board (draft → active → achieved)
+- Inbox triage board (unprocessed → organized → directed)
+
+#### Smart Connections — AI Semantic Search
+
+**CODEX step:** × Multiply
+
+Local AI embeddings — finds related notes by **meaning**, not just keywords. "What in my codex connects to this idea?" All processing happens locally on your Mac. Zero cloud, fully private.
+
+**What it unlocks:**
+- Discover hidden connections between domains you never manually linked
+- Surface related notes while you're writing — automatic context
+- Semantic search: "find everything about revenue strategy" returns meaning-matched results
+- Pairs with MCP (Model Context Protocol) to let your AI agents query the vault semantically
+
+### Tier 3 — Install Month 2 (Automation Layer)
+
+#### MetaFlow — Auto-Populate Frontmatter
+
+**CODEX step:** Organize
+
+Automatically sets frontmatter based on folder location. Drop a file in `01 Projects/` → auto-sets `type: project`. Drop in `03 Agents/` → auto-sets `type: agent`, `operator: agent`. Automates the Organize step classification.
+
+#### Metadata Auto Classifier — AI-Powered Tagging
+
+**CODEX step:** Organize
+
+Uses AI to analyze note content and suggest entity type + tags. Drop a raw capture in the inbox → it suggests the right type, status, and tags based on what you wrote.
+
+#### Omnisearch — Next-Gen Search
+
+**CODEX step:** Capture / × Multiply
+
+Advanced search that includes OCR on images and PDFs. Find anything in the vault instantly, even content inside screenshots or scanned documents.
+
+### Do NOT Install
+
+| Plugin | Why Not |
+|--------|---------|
+| **Obsidian Git** | You already have manual Git on Mac + `codex-watch` auto-commit on VPS. Adding another auto-committer = guaranteed merge conflicts. Git stays manual on Mac. |
+
+### Install Priority
+
+```
+Week 1:  Dataview + Templater + QuickAdd + Tasks     ← transforms the vault
+Week 2:  Periodic Notes + Calendar + Kanban           ← powers the loop
+Week 3:  Smart Connections                            ← AI-native search
+Month 2: MetaFlow + Metadata Auto Classifier          ← automation layer
+```
+
+---
+
+## Mission Control Dashboard
+
+Once Dataview is installed, create this note as your command center. Every query updates live — open this note and you see the real-time state of your entire codex.
+
+### The Dashboard (Create as `_codex/mission-control.md`)
+
+```markdown
+---
+title: "Mission Control"
+type: reference
+status: active
+tags: [type/reference, status/active, dashboard]
+---
+
+# 🎛️ Mission Control
+
+## 🎯 Active Goals
+
+\```dataview
+TABLE status, operator, realm
+FROM ""
+WHERE type = "goal" AND status = "active"
+SORT file.mtime DESC
+\```
+
+## 📋 Tasks Due This Week
+
+\```dataview
+TASK FROM ""
+WHERE due <= date(today) + dur(7 days) AND !completed
+SORT due ASC
+\```
+
+## 📥 Inbox (Unprocessed)
+
+\```dataview
+TABLE file.ctime as "Captured"
+FROM "06 Inbox (Queue)"
+SORT file.ctime DESC
+\```
+
+## 🤖 Agent Activity (Last 7 Days)
+
+\```dataview
+TABLE operator, type, file.mtime as "Last Modified"
+FROM ""
+WHERE operator = "agent" AND file.mtime >= date(today) - dur(7 days)
+SORT file.mtime DESC
+LIMIT 20
+\```
+
+## 🔄 Active Projects
+
+\```dataview
+TABLE status, operator, realm
+FROM ""
+WHERE type = "project" AND status = "active"
+SORT file.mtime DESC
+\```
+
+## ⚠️ Blocked Items
+
+\```dataview
+TABLE type, status
+FROM ""
+WHERE status = "blocked"
+SORT file.mtime DESC
+\```
+
+## 🔗 Orphan Notes (Need Connecting)
+
+\```dataview
+LIST
+FROM ""
+WHERE length(file.inlinks) = 0 AND length(file.outlinks) = 0
+LIMIT 15
+\```
+
+## 📊 Entity Counts
+
+\```dataview
+TABLE length(rows) as "Count"
+FROM ""
+WHERE type
+GROUP BY type
+SORT length(rows) DESC
+\```
+```
+
+### Weekly Review Template (For Periodic Notes)
+
+```markdown
+---
+title: "Weekly Review — {{date:YYYY-[W]ww}}"
+type: review
+status: active
+tags: [type/review, cadence/weekly]
+---
+
+# × Multiply — Week {{date:ww}}, {{date:YYYY}}
+
+## What moved forward this week?
+
+\```dataview
+TASK FROM ""
+WHERE completed AND completion >= date(today) - dur(7 days)
+\```
+
+## What's stuck?
+
+\```dataview
+TABLE status, type
+FROM ""
+WHERE status = "blocked"
+SORT file.mtime DESC
+\```
+
+## Inbox Health
+- [ ] Process all items in 06 Inbox (Queue)
+- [ ] Run `obsidian orphans` — connect or archive lonely notes
+- [ ] Run `obsidian unresolved` — fix broken links
+- [ ] Check `obsidian tags counts` — consolidate tag sprawl
+
+## Key Decisions Made
+
+-
+
+## Lessons Learned (Feed Back to Capture)
+
+-
+
+## Next Week's Focus
+
+-
+```
 
 ---
 
