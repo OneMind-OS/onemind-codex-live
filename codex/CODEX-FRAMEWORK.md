@@ -1243,19 +1243,27 @@ One hotkey = new entity with the right template and frontmatter. Eliminates all 
 
 **Install:** Settings → Community Plugins → Browse → search "QuickAdd" → Install → Enable
 
-#### Tasks — Vault-Wide Task Tracking
+#### Tasks + Todoist Sync — Hybrid Task Management
 
-**CODEX step:** Execute
+**CODEX step:** Capture + Execute
 
-Tracks tasks with due dates, priorities, recurrence, and completion status across the entire vault. Combined with Dataview, you can query "show all tasks due this week across all 100 domains."
+You already use Todoist — don't abandon it. Todoist has mobile push notifications, natural language input, and cross-platform reminders that Obsidian Tasks can't match. The right move is a **hybrid: Todoist for capture and reminders, Obsidian for dashboard and context.**
 
-**What it unlocks:**
-- Due dates: `📅 2026-04-01`
-- Priorities: `⏫ High`, `🔼 Medium`, `🔽 Low`
-- Recurrence: `🔁 every week`
-- Global task queries that span all quadrants and domains
+**The stack:**
+- **Todoist** — quick mobile capture, reminders, due date notifications, recurring tasks
+- **Todoist Sync plugin** — two-way sync that materializes Todoist tasks inside Obsidian notes. Changes in either app sync to the other.
+- **Dataview** — query synced Todoist tasks alongside native vault data in your Mission Control dashboard
 
-**Install:** Settings → Community Plugins → Browse → search "Tasks" → Install → Enable
+**What this unlocks:**
+- Capture a task on your phone via Todoist → it appears in Obsidian automatically
+- Complete a task in Obsidian → Todoist marks it done
+- Dataview queries can pull both Todoist tasks AND vault-native tasks into one view
+- You keep Todoist's reminders and notifications (Obsidian has none)
+- Tasks live in context — next to the goals, projects, and notes they relate to
+
+**Install:** Settings → Community Plugins → Browse → search "Todoist Sync" → Install → Enable → enter your Todoist API token
+
+> **Why not Obsidian Tasks alone?** Obsidian Tasks has no mobile notifications, no push reminders, and no natural language input. Since you already use Todoist and it handles the Execute step's "when" (due dates, reminders), keep it. Todoist Sync bridges it into the codex so Dataview can query everything in one place.
 
 ### Tier 2 — Install Week 2 (Powers the Loop)
 
@@ -1319,19 +1327,45 @@ Uses AI to analyze note content and suggest entity type + tags. Drop a raw captu
 
 Advanced search that includes OCR on images and PDFs. Find anything in the vault instantly, even content inside screenshots or scanned documents.
 
-### Do NOT Install
+#### Obsidian Git — Auto-Commit from Mac
 
-| Plugin | Why Not |
-|--------|---------|
-| **Obsidian Git** | You already have manual Git on Mac + `codex-watch` auto-commit on VPS. Adding another auto-committer = guaranteed merge conflicts. Git stays manual on Mac. |
+**CODEX step:** All steps (infrastructure)
+
+Eliminates the manual `git add → commit → push` friction on your Mac. Auto-commits your changes on a schedule and auto-pulls VPS agent changes — keeping your Mac always in sync with GitHub.
+
+**Why this is safe with your VPS pipeline:**
+- VPS `codex-watch` auto-commits agent changes (~3s) and pushes to GitHub
+- Obsidian Git on Mac auto-pulls (every 5 min) → you always see agent changes
+- Obsidian Git on Mac auto-commits your edits (every 10 min) and pushes → VPS gets them within 1 min
+- Smaller, more frequent commits = smaller diffs = easier to merge if conflicts ever arise
+- The conflict risk is the SAME whether you commit manually or automatically — auto just makes the window smaller
+
+**Recommended settings:**
+- Auto-pull interval: **5 minutes**
+- Auto-commit interval: **10 minutes**
+- Auto-push after commit: **enabled**
+- Pull on startup: **enabled**
+- Commit message format: `vault backup: {{date}}`
+
+**What this changes for iPhone captures:**
+```
+Before: iPhone → Sync → Mac → YOU manually git commit → GitHub → VPS (hours later)
+After:  iPhone → Sync → Mac → Obsidian Git auto-commits (≤10 min) → GitHub → VPS (~1 min)
+```
+
+Your iPhone captures reach the VPS in ~11 minutes instead of waiting until you sit down and remember to commit.
+
+**Mobile note:** Obsidian Git's mobile support is unstable (uses IsomorphicGit, not native Git). Don't enable it on iPhone — you have Obsidian Sync for that. Obsidian Git runs on Mac only.
+
+**Install:** Settings → Community Plugins → Browse → search "Git" → Install → Enable
 
 ### Install Priority
 
 ```
-Week 1:  Dataview + Templater + QuickAdd + Tasks     ← transforms the vault
-Week 2:  Periodic Notes + Calendar + Kanban           ← powers the loop
-Week 3:  Smart Connections                            ← AI-native search
-Month 2: MetaFlow + Metadata Auto Classifier          ← automation layer
+Week 1:  Dataview + Templater + QuickAdd + Todoist Sync + Obsidian Git
+Week 2:  Periodic Notes + Calendar + Kanban
+Week 3:  Smart Connections
+Month 2: MetaFlow + Metadata Auto Classifier
 ```
 
 ---
@@ -1368,6 +1402,8 @@ TASK FROM ""
 WHERE due <= date(today) + dur(7 days) AND !completed
 SORT due ASC
 \```
+
+> **Note:** With Todoist Sync installed, your Todoist tasks also appear in the vault and can be queried by Dataview alongside native vault tasks.
 
 ## 📥 Inbox (Unprocessed)
 
