@@ -5,7 +5,7 @@ type: skill
 status: active
 created: "{YYYY-MM-DD}"
 owner: "{your-name}"
-tags: [type/skill, "domain/{quadrant}"]
+tags: [type/skill, "domain/{domain}"]
 related: []
 ai_summary: "Skill: {what this capability does in ≤10 words}"
 ---

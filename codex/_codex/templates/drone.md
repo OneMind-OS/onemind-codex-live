@@ -6,7 +6,7 @@ status: active
 created: "{YYYY-MM-DD}"
 owner: "{your-name}"
 realm: physical
-tags: [type/drone, "domain/{quadrant}"]
+tags: [type/drone, "domain/{domain}"]
 related: []
 ai_summary: "Drone: {name} — {what it does in ≤10 words}"
 ---

@@ -16,7 +16,7 @@ ai_summary: "Operating instructions for AI agents working with this Codex vault"
 
 ## What This Is
 
-This is a **One Mind Codex vault** — a structured knowledge base built with the CODEX method (Capture → Organize → Direct → Execute → × Multiply). It uses plain Markdown files with YAML frontmatter, organized into four quadrants:
+This is a **One Mind Codex vault** — a structured knowledge base built with the CODEX method (Capture → Organize → Direct → Execute → × Multiply). It uses plain Markdown files with YAML frontmatter, organized into three life domains and one operating layer:
 
 | ID Range | Quadrant | Domain |
 |----------|----------|--------|
@@ -64,10 +64,10 @@ This approach lets you understand the vault's state from ~5 system files, scan 1
 ## Capture Rules
 
 - New content should use the appropriate template from `_codex/templates/`.
-- If the target domain is uncertain, place the document in `06 Inbox (Queue)/` within the most likely quadrant folder.
-- If even the quadrant is unclear, place it in the staging area and flag it for triage.
+- If the target domain is uncertain, place the document in `06 Inbox (Queue)/` within the most likely domain group.
+- If even the domain group is unclear, place it in the staging area and flag it for triage.
 - Always populate `ai_summary` in frontmatter — this is how other agents (and future you) discover documents without reading them fully.
-- Never create new top-level folders. The vault structure is fixed: `_codex/`, four quadrant folders, and root doctrine documents.
+- Never create new top-level folders. The vault structure is fixed: `_codex/`, the domain folders (SO, HP, LE, GE), and root doctrine documents.
 
 ---
 
@@ -84,7 +84,7 @@ This approach lets you understand the vault's state from ~5 system files, scan 1
 ## Review Cadence (× Multiply)
 
 - **Weekly review**: process inboxes, update active projects, review agent output, adjust priorities. Each review multiplies the system's value. Use profiles in `_codex/profiles/`.
-- **Monthly review**: quadrant health check, metric review, system maintenance, goal alignment.
+- **Monthly review**: domain health check, metric review, system maintenance, goal alignment.
 - **Quarterly review**: pattern analysis, decision audit, long-term project recalibration, OKR setting.
 - Review documents use the `review` template and are stored in the appropriate domain folder.
 

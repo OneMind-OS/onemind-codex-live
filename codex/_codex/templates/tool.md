@@ -6,7 +6,7 @@ status: active
 created: "{YYYY-MM-DD}"
 owner: "{your-name}"
 realm: "{digital | physical | hybrid}"
-tags: [type/tool, "domain/{quadrant}"]
+tags: [type/tool, "domain/{domain}"]
 related: []
 ai_summary: "Tool: {name} — {what it does in ≤10 words}"
 ---

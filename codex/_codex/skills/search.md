@@ -30,7 +30,7 @@ Use Obsidian's tag panel or grep:
 ```
 #type/decision       → all decision records
 #type/sop            → all SOPs
-#domain/so           → everything in SO quadrant
+#domain/so           → everything in SO
 #status/active       → only active items
 #cadence/weekly      → weekly review notes
 ```

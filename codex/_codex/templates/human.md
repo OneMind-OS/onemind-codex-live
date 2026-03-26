@@ -31,7 +31,7 @@ ai_summary: "{Full Name} — {role/relationship}, {one key fact}"
 
 ## Responsibilities
 
-{What does this person own in your system? What quadrants/domains do they touch?}
+{What does this person own in your system? What domains do they touch?}
 
 - {Responsibility 1}
 - {Responsibility 2}

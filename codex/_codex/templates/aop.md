@@ -6,7 +6,7 @@ status: active
 created: "{YYYY-MM-DD}"
 owner: "{agent-name}"
 agent: "{which agent runs this}"
-tags: [type/aop, "domain/{quadrant}", "operator/{agent-name}"]
+tags: [type/aop, "domain/{domain}", "operator/{agent-name}"]
 related: []
 ai_summary: "AOP: {what this agent procedure does in ≤10 words}"
 ---

@@ -5,7 +5,7 @@ type: doctrine
 status: active
 created: "{YYYY-MM-DD}"
 owner: "{your-name}"
-tags: [type/doctrine, "domain/{quadrant}"]
+tags: [type/doctrine, "domain/{domain}"]
 related: []
 ai_summary: "Doctrine: {core principle in ≤15 words}"
 ---

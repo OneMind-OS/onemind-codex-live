@@ -34,7 +34,7 @@ This is a **One Mind Codex** — a structured knowledge base in plain Markdown, 
 75-99  GE  — Generational Entrepreneurship  Business, ventures, wealth
 ```
 
-Each quadrant contains **numbered domain folders**. Each domain folder has a `README.md` explaining what lives there.
+Each domain group contains **numbered domain folders**. Each domain folder has a `README.md` explaining what lives there.
 
 ---
 

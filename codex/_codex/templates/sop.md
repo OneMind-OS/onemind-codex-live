@@ -5,7 +5,7 @@ type: sop
 status: active
 created: "{YYYY-MM-DD}"
 owner: "{your-name}"
-tags: [type/sop, "domain/{quadrant}"]
+tags: [type/sop, "domain/{domain}"]
 related: []
 ai_summary: "SOP: {what process this describes in ≤10 words}"
 ---

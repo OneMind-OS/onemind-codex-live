@@ -5,7 +5,7 @@ type: index
 status: active
 created: 2026-01-01
 owner: zeus
-tags: [quadrant/ui, type/index, status/active]
+tags: [domain/so, type/index, status/active]
 ai_summary: "Quadrant index for Sovereign Operations — AI, tech, infrastructure, architecture, automation"
 ---
 
@@ -32,7 +32,7 @@ LE = The home it lives in
 GE = What it builds for the world
 ```
 
-Without a strong SO quadrant, the other three quadrants are fragmented. SO is what connects them.
+Without a strong SO layer, the other three domains are fragmented. SO is what connects them.
 
 ---
 
@@ -55,7 +55,7 @@ Without a strong SO quadrant, the other three quadrants are fragmented. SO is wh
 
 ## My Approach (Zeus's Example)
 
-I use the SO quadrant as the **control room** for everything. My AI agents (Legacy, Oracle, Spartan, etc.) all have their configs documented here. Every automation I run is mapped in `09 Automation`. Every SOP I follow is in `03 Protocols`.
+I use the SO layer as the **control room** for everything. My AI agents (Legacy, Oracle, Spartan, etc.) all have their configs documented here. Every automation I run is mapped in `09 Automation`. Every SOP I follow is in `03 Protocols`.
 
 The `06 Inbox` is the highest-traffic folder — it receives everything I capture throughout the day, from voice memos to screenshots to AI outputs. I process it during my daily review.
 

@@ -5,7 +5,7 @@ status: active
 created: 2026-03-19
 owner: zeus
 tags: [type/doctrine, status/active]
-ai_summary: "Master document — the One Mind framework, four quadrants, and how human + AI share a cognitive operating system"
+ai_summary: "Master document — the One Mind framework, three life domains, one operating layer, and how human + AI share a cognitive operating system"
 ---
 
 # ONE MIND CODEX
@@ -50,7 +50,7 @@ GTD gave us the capture habit. PARA gave us structure. CODE gave us a creative w
 Every document has YAML frontmatter with `ai_summary`, typed tags, and status fields. Agents don't need to read 10,000 words to understand your vault — they scan summaries, check types, and drill down only when needed.
 
 **2. Unified Life Model**
-Four quadrants cover your entire existence — not just work, not just projects. Your health, your family, your business, and your infrastructure all live in one system with one schema.
+Three life domains plus one operating layer cover your entire existence — not just work, not just projects. Your health, your family, your business, and your infrastructure all live in one system with one schema.
 
 **3. Tool-Agnostic by Design**
 Plain Markdown files in folders. No proprietary database. No vendor lock-in. Move between Obsidian, VS Code, Logseq, or raw `vim` — the system doesn't care. Your operating system outlives any tool.
@@ -59,7 +59,7 @@ Plain Markdown files in folders. No proprietary database. No vendor lock-in. Mov
 Build systems that compound. Design for resilience. Think in generations, not quarters. Technology serves human flourishing — not the other way around.
 
 **5. Generational Design**
-The LE (Legacy Evolution) quadrant explicitly covers family, estate, and multi-generational planning. Your system should outlive you and serve those who come after.
+The LE (Legacy Evolution) domain explicitly covers family, estate, and multi-generational planning. Your system should outlive you and serve those who come after.
 
 ---
 
@@ -72,7 +72,7 @@ Every piece of information flows through five stages:
   │ CAPTURE │───▶│ ORGANIZE  │───▶│ DIRECT │───▶│ EXECUTE │───▶│ × MULTI- │
   │         │    │           │    │        │    │         │    │   PLY    │
   └─────────┘    └───────────┘    └────────┘    └─────────┘    └──────────┘
-   Inbox, voice,   4 quadrants,    Command:       Operators      Review,
+   Inbox, voice,   3 domains + SO, Command:       Operators      Review,
    quick capture   100 domains,    prioritize,    run the work:  measure,
    from anywhere   entity types,   assign owner,  humans, agents,extract
                    frontmatter     define done     SOPs, skills   lessons
@@ -101,41 +101,62 @@ CODEX isn't better at note-taking. It's a different category — a **life operat
 
 ---
 
-## 4. The Four Quadrants
+## 4. The Architecture: 3 Domains + 1 Operating Layer
 
-One Mind divides life into four quadrants, each spanning 25 domain numbers:
+One Mind OS is NOT four equal boxes. It's **three life domains running on one operating layer** — like apps running on an OS.
 
-### 🧠 SO — Sovereign Operations (00–24)
+```
+┌──────────────────────────────────────────────────────┐
+│          SO — Sovereign Operations (00–24)            │
+│          The operating layer that runs everything     │
+├────────────────┬─────────────────┬───────────────────┤
+│  💪 HP (25–49) │  🏡 LE (50–74)  │  👑 GE (75–99)   │
+│  Your Self     │  Your Family     │  Your Business    │
+└────────────────┴─────────────────┴───────────────────┘
+```
 
-**The Brain.** Technology, AI, infrastructure, architecture. Everything that powers the system itself.
+### 🧠 SO — Sovereign Operations (00–24) — The Operating Layer
 
-This is where your AI agents live, your tools are documented, your infrastructure is mapped. If it's about building and maintaining the machine — it's SO.
+**The layer that runs your life.** SO is NOT a life domain — it's the platform the other three run on. Your agents, tools, protocols, automations, and system infrastructure all live here.
 
-*Domains include: System Core, Security, AI Agents, Development, Data, Networking, Automation.*
+Think of it this way: HP, LE, and GE are the WHAT of your life. SO is the HOW. Without SO, the three domains are disconnected folders. With SO, they're an operating system.
 
-### 💪 HP — Holistic Performance (25–49)
+SO comes first in the numbering (00–24) because the foundation gets laid before the house. Every capture flows through SO's inbox. Every automation fires from SO. Every agent lives in SO and serves HP, LE, and GE.
 
-**The Self.** Health, fitness, mental performance, skills, personal finance, learning.
+*Contains: Framework doctrine, AI agents, protocols & SOPs, inbox queue, infrastructure, automation, development, security, research.*
+
+### 💪 HP — Holistic Performance (25–49) — The Self
+
+**Everything about YOU.** Health, fitness, mental performance, skills, personal finance, learning.
 
 Your body is the hardware. HP covers everything about maintaining and upgrading it — physical training, nutrition, mental health, skill acquisition, and personal wealth.
 
-*Domains include: Physical Training, Nutrition, Mental Health, Skills, Personal Finance, Relationships.*
+*Contains: Identity, intelligence, body, mastery, life systems, finance, sovereignty, relationships, spirituality, joy.*
 
-### 🏡 LE — Legacy Evolution (50–74)
+### 🏡 LE — Legacy Evolution (50–74) — The Family
 
-**The Family.** Home, family, estate, agriculture, generational planning.
+**What outlives you.** Home, family, estate, agriculture, generational planning.
 
 What you're building that outlives you. Your home, your land, your family systems, your estate plan. The things measured in decades and generations, not sprints.
 
-*Domains include: Home, Property, Family, Agriculture, Estate Planning, Community.*
+*Contains: Home, marriage, children, parents, heritage, health (family), wealth (estate), legal, community.*
 
-### 👑 GE — Generational Entrepreneurship (75–99)
+### 👑 GE — Generational Entrepreneurship (75–99) — The Business
 
-**The Business.** Ventures, revenue, marketing, partnerships, brand, wealth creation.
+**How you create value.** Ventures, revenue, marketing, partnerships, brand, wealth creation.
 
 How you create and compound value in the world. Business strategy, marketing, sales, partnerships, IP, and the ventures that fund everything else.
 
-*Domains include: Strategy, Marketing, Sales, Partnerships, Products, Brand, Revenue.*
+*Contains: Personal brand, education, IP & platforms, technology, treasury, strategy, partnerships, ventures.*
+
+### Why This Hierarchy Matters
+
+The distinction between SO and the three life domains is the most important structural decision in the framework:
+
+- **For beginners:** "You have 3 life folders and 1 system folder." — instantly understandable.
+- **For agents:** SO is where agent configs, skills, and AOPs live. The agent reads SO first, then serves HP/LE/GE.
+- **For the book:** SO is the foundation chapter. HP/LE/GE are the application chapters.
+- **For teaching:** "Sovereign Operations is where you COMMAND. The three domains are where you LIVE."
 
 ---
 
@@ -164,7 +185,7 @@ your-codex/
 ### Key Concepts
 
 - **`_codex/`** — the system folder. Contains everything agents and humans need to understand and operate this vault.
-- **`_codex/system/`** — pinned context files that agents load first. Contains the current state of quadrants, active priorities, and operational rules.
+- **`_codex/system/`** — pinned context files that agents load first. Contains the current state of domains, active priorities, and operational rules.
 - **`_codex/templates/`** — standard templates for every document type (note, decision, SOP, project, person, review, etc.).
 - **`_codex/profiles/`** — review cadences and performance profiles for weekly/monthly examination.
 - **Frontmatter** — every document has YAML frontmatter with `title`, `type`, `status`, `tags`, and `ai_summary`. This is how agents navigate without reading everything.
@@ -180,7 +201,7 @@ your-codex/
 2. **Open in Obsidian** — or any Markdown editor. Obsidian recommended for the best experience.
 3. **Read [`QUICK-START.md`](QUICK-START.md)** — the 30-minute onboarding guide. Four buckets, three templates, one weekly review.
 4. **Start capturing** — use templates from `_codex/templates/`. Start with goal, task, and note templates.
-5. **Start with 4 quadrants, not 100 domains** — don't try to activate all domains at once. Drop things into the right quadrant. Domains activate as your life expands. See CODEX-FRAMEWORK.md for the Progressive Activation guide.
+5. **Start with 3 domains + SO, not 100 sub-domains — drop things into the right place. Domains activate as your life expands. See CODEX-FRAMEWORK.md for the Progressive Activation guide.
 6. **Review weekly** — the × (multiply) step isn't optional. Use the review profile in `_codex/profiles/` to stay accountable. Each review cycle multiplies the system's value.
 
 ### For AI Agents

@@ -43,7 +43,7 @@ The codex compounds in value exactly as much as you review it.
 
 1. Read the last 4 weekly reviews
 2. Fill in `_codex/templates/review.md` for the full month
-3. Run the **Quadrant Check** section — one paragraph per quadrant
+3. Run the **Domain Check** section — one paragraph per domain (SO, HP, LE, GE)
 4. Review metrics against targets — update any tracking files
 5. Update `_codex/system/active-goals.md` — are the priorities still right?
 6. Close or archive completed projects

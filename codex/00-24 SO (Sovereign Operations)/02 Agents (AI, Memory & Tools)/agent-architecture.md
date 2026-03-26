@@ -12,7 +12,7 @@ ai_summary: "Multi-agent architecture with 9 specialized agents — Legacy as ce
 
 ## The Core Idea
 
-One general-purpose AI agent can't do everything well. Instead, I run a **central intelligence** (Legacy) supported by **8 domain-specific agents**, each responsible for a quadrant or sub-domain of life.
+One general-purpose AI agent can't do everything well. Instead, I run a **central intelligence** (Legacy) supported by **8 domain-specific agents**, each responsible for a domain or sub-domain of life.
 
 ## Agent Roster
 

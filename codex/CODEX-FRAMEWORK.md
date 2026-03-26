@@ -61,7 +61,7 @@ The codex IS a harness — not for a coding project, but for your entire life. E
 | **Sprint contracts** — agree on "done" before building | **Goal/task templates** — success criteria defined before execution |
 | **Context state files** — carry agent memory across sessions | **`_codex/system/`** — pinned context + `ai_summary` fields on every document |
 | **File-based agent communication** — one agent writes, another reads | **The codex vault** — agents read and write markdown files with shared conventions |
-| **Decomposed tasks** — break big work into tractable chunks | **Progressive activation** — start with 4 quadrants, expand to 100 domains |
+| **Decomposed tasks** — break big work into tractable chunks | **Progressive activation** — start with 3 domains + SO, expand to 100 domains |
 
 ### Why This Matters
 
@@ -97,7 +97,7 @@ Five steps. One compounding loop.
   │ CAPTURE │───▶│ ORGANIZE  │───▶│ DIRECT │───▶│ EXECUTE │───▶│ × MULTI- │
   │         │    │           │    │        │    │         │    │   PLY    │
   └─────────┘    └───────────┘    └────────┘    └─────────┘    └──────────┘
-   Inbox, voice,   4 quadrants,    Command:       Operators      Review,
+   Inbox, voice,   3 domains + SO, Command:       Operators      Review,
    quick capture   100 domains,    prioritize,    run the work:  measure,
    from anywhere   entity types,   assign owner,  humans, agents,extract
                    frontmatter     define done     SOPs, skills   lessons
@@ -122,7 +122,7 @@ Capture isn't about writing good notes. It's about **reducing friction to zero**
 | Trigger | Capture Method | Where It Lands |
 |---------|---------------|----------------|
 | Thought in the shower | Voice memo on phone | Inbox |
-| Meeting takeaway | Quick text note | Relevant quadrant inbox |
+| Meeting takeaway | Quick text note | Relevant domain inbox |
 | Article worth saving | Web clip + 1-line summary | Inbox |
 | Agent produced a report | Auto-saved by agent | Domain folder directly |
 | Dream/idea at 2am | Bedside notepad → photo | Inbox |
@@ -131,13 +131,13 @@ Capture isn't about writing good notes. It's about **reducing friction to zero**
 ### Rules
 
 1. **Capture fast, organize later.** Don't stop to categorize in the moment. Get it in. The Organize step handles routing.
-2. **Use the inbox.** If you don't know where it goes, it goes to `06 Inbox (Queue)/` in the relevant quadrant — or the top-level staging area if the quadrant is unclear.
+2. **Use the inbox.** If you don't know where it goes, it goes to `06 Inbox (Queue)/` in the relevant domain — or the top-level staging area if the domain is unclear.
 3. **Use templates.** Even quick captures should use the appropriate template from `_codex/templates/`. This ensures frontmatter is present from the start.
 4. **Frontmatter from birth.** Every document gets YAML frontmatter when created — at minimum: `title`, `type`, `status`, `created`, `tags`.
 
 ### The Inbox
 
-Every quadrant has a `06 Inbox (Queue)/` subdirectory for unsorted captures. During the Organize step (or the weekly review), items get routed to their proper domain folder.
+Every domain group has a `06 Inbox (Queue)/` subdirectory for unsorted captures. During the Organize step (or the weekly review), items get routed to their proper domain folder.
 
 ### How Capture Connects to Organize
 
@@ -157,7 +157,7 @@ Organize does NOT decide priority, ownership, deadlines, or what happens next �
 
 | Organize DOES | Organize DOES NOT |
 |--------------|-------------------|
-| Route to the right quadrant and domain | Decide if it matters |
+| Route to the right domain | Decide if it matters |
 | Assign an entity type (goal, note, task, etc.) | Assign who does it |
 | Add frontmatter and tags | Set deadlines or priorities |
 | Make things findable by humans and AI | Define success criteria |
@@ -166,7 +166,7 @@ Organize does NOT decide priority, ownership, deadlines, or what happens next �
 
 ### The Three Organizing Actions
 
-1. **Route** — move from inbox to the right quadrant → domain folder
+1. **Route** — move from inbox to the right domain folder
 2. **Type** — assign the entity type (is this a note? a goal? a task? a decision?)
 3. **Tag** — add frontmatter so AI can find it without reading it
 
@@ -205,9 +205,9 @@ D — DIRECT:
 
 ### The 100-Domain System
 
-Each quadrant has 25 numbered domains (e.g., `00 System Core`, `25 Identity`, `50 Home`, `75 Brand`). Domains are the primary organizational unit — more stable than projects, more granular than quadrants.
+Each group has 25 numbered domains (e.g., `00 System Core`, `25 Identity`, `50 Home`, `75 Brand`). Domains are the primary organizational unit — more stable than projects, more granular than the top-level groups.
 
-**You don't start with 100 domains.** See [Progressive Activation](#progressive-activation) below — you start with 4 quadrants and activate domains as your life expands. The 100 slots are the ceiling, not the floor.
+**You don't start with 100 domains.** See [Progressive Activation](#progressive-activation) below — you start with 3 domains + SO and activate domains as your life expands. The 100 slots are the ceiling, not the floor.
 
 ### How Organize Connects to Direct
 
@@ -429,8 +429,8 @@ Every week:
 
 Every month:
 
-1. **Quadrant health check** — are all four quadrants getting attention or is one starving?
-2. **Metric review** — track key metrics for each quadrant
+1. **Domain health check** — are all three life domains getting attention or is one starving?
+2. **Metric review** — track key metrics for each domain
 3. **System maintenance** — archive stale documents, update templates, refine conventions
 4. **Goal alignment** — are daily actions serving quarterly/annual goals?
 
@@ -1106,7 +1106,7 @@ Supports tab completion and command history — browse your entire codex without
 
 ### Why This Matters for CODEX
 
-**1. Safe Organize step from terminal.** Move notes between domains and quadrants without breaking links:
+**1. Safe Organize step from terminal.** Move notes between domains without breaking links:
 ```bash
 # Move a processed inbox item to the right domain — links update automatically
 obsidian move file="06 Inbox (Queue)/startup-idea" to="75-99 GE (Galactic Empire)/84 Ventures/"
@@ -1155,25 +1155,41 @@ If Obsidian ever ships a headless CLI mode, VPS agents could migrate from direct
 
 ---
 
-**Start with 4. Grow to 100. Never feel overwhelmed.**
+**Start with 3 + 1. Grow to 100. Never feel overwhelmed.**
 
-The 100-domain system is the architecture — the full map of your life. But you don't start with the full map. You start with the 4 quadrants and activate domains as your life demands them.
+The 100-domain system is the architecture — the full map of your life. But you don't start with the full map. You start with 3 life domains and 1 operating layer, then activate domains as your life demands them.
 
-### Day 1 — Just 4 Quadrants (Simpler Than PARA)
+### The Structure: 3 Domains + 1 Operating Layer
+
+One Mind OS is NOT four equal boxes. It's **three life domains running on one operating layer**:
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│  SO                  HP                 LE              GE      │
-│  Tech & AI           You & Health       Family          Business│
-│  (your tools)        (your body)        (your people)   (your $)│
-└─────────────────────────────────────────────────────────────────┘
-
-"Drop it in the right quadrant. That's it."
+┌──────────────────────────────────────────────────────────────────┐
+│              SO — Sovereign Operations (00–24)                    │
+│              The operating layer that runs everything             │
+├─────────────────────┬─────────────────────┬──────────────────────┤
+│  HP (25–49)         │  LE (50–74)         │  GE (75–99)          │
+│  Your Self          │  Your Family         │  Your Business       │
+│  (health, mind, $)  │  (home, marriage)    │  (ventures, brand)   │
+└─────────────────────┴─────────────────────┴──────────────────────┘
 ```
 
-On your first day, you don't think about domains at all. You see 4 buckets. Captured something about your health? Drop it in HP. Business idea? GE. Server configuration? SO. Family matter? LE.
+**SO is the platform. HP, LE, GE are the applications.** Just like macOS isn't "another app" — it's the operating system that runs all the apps — SO isn't another life domain. It's the layer that runs your life domains.
 
-This is **simpler than PARA** — PARA asks you to decide between Projects, Areas, Resources, and Archives (confusing boundaries). Quadrants are obvious life domains.
+- SO holds your agents, tools, protocols, automations, and the framework itself
+- HP, LE, GE hold your actual life — health, family, business
+- Every capture flows THROUGH SO's inbox before routing to a domain
+- Every agent LIVES in SO and SERVES HP, LE, and GE
+
+### Day 1 — Just Drop Things In
+
+```
+"Is this about me? → HP. My family? → LE. My business? → GE. My system? → SO."
+```
+
+On your first day, you don't think about domains at all. You see 3 life folders and 1 system folder. Captured something about your health? Drop it in HP. Business idea? GE. Server configuration? SO. Family matter? LE.
+
+This is **simpler than PARA** — PARA asks you to decide between Projects, Areas, Resources, and Archives (confusing boundaries). Life domains are obvious.
 
 ### Week 1 — Activate Your Starter Domains (8–12)
 
@@ -1182,7 +1198,7 @@ After a few days of capturing, patterns emerge. Activate only the domains you're
 ```
 STARTER KIT (suggested — customize to your life):
 
-SO:  00 Framework, 02 Agents, 06 Inbox
+SO:  00 Framework, 02 Agents, 06 Inbox       ← the operating layer
 HP:  25 Identity, 27 Body, 29 Life Systems, 30 Finance
 LE:  50 Home, 52 Children
 GE:  75 Brand, 81 Strategy
@@ -1199,10 +1215,10 @@ As your system grows, you activate new domains:
 
 ### The Scale
 
-| Stage | Domains | Who |
-|-------|---------|-----|
-| **Beginner** | 4 quadrants (no domains) | Day 1 users |
-| **Starter** | 8–12 domains | Week 1 users |
+| Stage | Structure | Who |
+|-------|-----------|-----|
+| **Beginner** | 3 domains + SO (no sub-domains) | Day 1 users |
+| **Starter** | 8–12 domains activated | Week 1 users |
 | **Established** | 15–30 domains | Regular users |
 | **Power** | 30–50 domains | Serious builders |
 | **Dynasty** | 50–100 domains | Multi-generational estates |
@@ -1213,7 +1229,7 @@ As your system grows, you activate new domains:
 
 | | PARA | One Mind |
 |---|---|---|
-| **Day 1** | 4 folders. Use all 4. | 4 quadrants. Drop things in. |
+| **Day 1** | 4 folders. Use all 4. | 3 life domains + 1 operating layer. |
 | **Month 1** | Still 4 folders. | Activate 10-12 domains. |
 | **Year 1** | Still 4 folders. You've outgrown them. | 20-40 domains. Still growing. |
 | **The ceiling** | 4 folders forever. | 100 domains. You never outgrow it. |
@@ -1240,7 +1256,7 @@ This means an agent can understand the current state of your life by reading ~5 
 The framework is the skeleton. Your content is the muscle.
 
 1. **Capture** — get things into the system
-2. **Organize** — route to the right quadrant and domain, tag with the right entity type
+2. **Organize** — route to the right domain, tag with the right entity type
 3. **Direct** — command: decide what matters, who does it, what done looks like
 4. **Execute** — operators (human + AI) do the work
 5. **× Multiply** — review, measure, extract lessons, feed back into Capture
@@ -1266,7 +1282,7 @@ Dataview turns your 100 domains into a **queryable database**. Every note with f
 **What it unlocks:**
 - Query all 17 entity types by `type`, `status`, `operator`, `realm`
 - Build live dashboards that update automatically
-- Surface orphan notes, stale goals, overdue tasks across all quadrants
+- Surface orphan notes, stale goals, overdue tasks across all domains
 - Power the × Multiply loop with data instead of guesswork
 
 **Install:** Settings → Community Plugins → Browse → search "Dataview" → Install → Enable
@@ -1344,10 +1360,10 @@ Sidebar calendar widget. Click any date → see that day's daily note. Visual ti
 
 **CODEX step:** Direct
 
-Markdown-backed Kanban boards (Trello-style). Drag cards between columns: backlog → active → done. See all active projects across quadrants in one visual board.
+Markdown-backed Kanban boards (Trello-style). Drag cards between columns: backlog → active → done. See all active projects across domains in one visual board.
 
 **Use cases:**
-- Project status board per quadrant
+- Project status board per domain
 - Goal tracking board (draft → active → achieved)
 - Inbox triage board (unprocessed → organized → directed)
 

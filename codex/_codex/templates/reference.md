@@ -5,7 +5,7 @@ type: reference
 status: active
 created: "{YYYY-MM-DD}"
 owner: "{your-name}"
-tags: [type/reference, "domain/{quadrant}"]
+tags: [type/reference, "domain/{domain}"]
 source_url: ""
 related: []
 ai_summary: "Reference: {what this resource covers in ≤15 words}"

@@ -12,11 +12,11 @@ ai_summary: "Week of Mar 10-16: codex restructuring complete, agent roster deplo
 
 ## Period Summary
 
-Major infrastructure week. Finished restructuring the codex from the old PARA-based layout to the CODEX 4-quadrant system. All 9 agents are now deployed and running on the VPS. Fitness stayed consistent — hit all 4 training sessions.
+Major infrastructure week. Finished restructuring the codex from the old PARA-based layout to the CODEX domain system. All 9 agents are now deployed and running on the VPS. Fitness stayed consistent — hit all 4 training sessions.
 
 ## Wins
 
-- Codex migration complete — all notes moved to the 4-quadrant structure
+- Codex migration complete — all notes moved to the domain structure
 - 9-agent roster fully operational (Legacy + 8 domain agents)
 - Hit overhead press PR (135 lbs)
 - Family Sunday dinner with extended family

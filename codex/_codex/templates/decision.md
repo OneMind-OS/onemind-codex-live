@@ -5,7 +5,7 @@ type: decision
 status: active
 created: "{YYYY-MM-DD}"
 decided_by: "{your-name}"
-tags: [type/decision, "domain/{quadrant}"]
+tags: [type/decision, "domain/{domain}"]
 related: []
 ai_summary: "Decision: {what was chosen and why, in ≤15 words}"
 ---

@@ -133,7 +133,7 @@ Tags use a `namespace/value` pattern:
 
 | Namespace | Examples | Purpose |
 |-----------|----------|---------|
-| `domain/` | `domain/ui`, `domain/hp`, `domain/ge` | Which quadrant |
+| `domain/` | `domain/ui`, `domain/hp`, `domain/ge` | Which domain |
 | `type/` | `type/goal`, `type/task`, `type/sop`, `type/agent` | Entity type |
 | `status/` | `status/active`, `status/draft`, `status/archived` | Lifecycle state |
 | `operator/` | `operator/zeus`, `operator/legacy`, `operator/spartan` | Who owns execution |
@@ -144,7 +144,7 @@ Tags use a `namespace/value` pattern:
 
 ## Folder Rules
 
-- **Never create top-level folders** — All notes go inside the 4 quadrants
+- **Never create top-level folders** — All notes go inside the domain folders (SO, HP, LE, GE)
 - **Inbox first when unsure** — Drop uncertain items in `06 Inbox (Queue)/`
 - **Numbered domains** — Don't rename or renumber existing domain folders
 - **Subfolders are fine** — Create subfolders within domains as needed
@@ -154,12 +154,12 @@ Tags use a `namespace/value` pattern:
 ## ID Format
 
 ```
-{quadrant-code}-{domain-number}-{YYYYMMDDHHMMSS}
+{domain-code}-{domain-number}-{YYYYMMDDHHMMSS}
 ```
 
 Examples:
-- `so-02-20260318143022` — SO quadrant, domain 02, timestamped
-- `hp-29-20260318-morning-routine` — HP quadrant, domain 29, descriptive slug
-- `ge-75-brand-architecture` — GE quadrant, domain 75
+- `so-02-20260318143022` — SO domain, subdomain 02, timestamped
+- `hp-29-20260318-morning-routine` — HP domain, subdomain 29, descriptive slug
+- `ge-75-brand-architecture` — GE domain, subdomain 75
 
 IDs are optional but recommended for notes that other notes will link to.

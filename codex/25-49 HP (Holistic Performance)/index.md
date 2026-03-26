@@ -5,7 +5,7 @@ type: index
 status: active
 created: 2026-01-01
 owner: zeus
-tags: [quadrant/hp, type/index, status/active]
+tags: [domain/hp, type/index, status/active]
 ai_summary: "Quadrant index for Holistic Performance — self, health, money, skills, relationships, daily life"
 ---
 

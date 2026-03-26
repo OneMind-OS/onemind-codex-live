@@ -59,5 +59,5 @@ ai_summary: "How to process the inbox and route content — the O step in CODEX"
 ## Rules
 
 - Every file needs a permanent home — inbox is a staging area, not storage
-- If genuinely uncertain after 30 seconds, put it in the most relevant quadrant's inbox subfolder
+- If genuinely uncertain after 30 seconds, put it in the most relevant domain group's inbox subfolder
 - Never delete inbox items to "clean up" — route them or archive them

@@ -6,7 +6,7 @@ status: active
 created: "{YYYY-MM-DD}"
 owner: "{your-name}"
 realm: physical
-tags: [type/robot, "domain/{quadrant}"]
+tags: [type/robot, "domain/{domain}"]
 related: []
 ai_summary: "Robot: {name} — {what it does in ≤10 words}"
 ---

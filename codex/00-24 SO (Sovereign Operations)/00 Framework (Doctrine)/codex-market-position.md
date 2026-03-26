@@ -58,7 +58,7 @@ Every other framework was designed for humans alone and tries to retrofit AI. CO
 
 ### 2. The Full Pipeline: Method + Structure + Intelligence + Execution + Measurement
 - **METHOD:** CODEX (Capture → Organize → Direct → Execute → × Multiply)
-- **STRUCTURE:** 4 quadrants, 100 domains (progressive activation), 17 entity types
+- **STRUCTURE:** 3 life domains + SO operating layer, 100 sub-domains (progressive activation), 17 entity types
 - **INTELLIGENCE:** `_codex/` (skills, templates, profiles, pinned system context)
 - **EXECUTION:** AI agents running skills from portable markdown
 - **MEASUREMENT:** × Multiply step — metrics, reviews, intelligence scores (HPI, LEI, GEI, IOI), review cadences
@@ -69,7 +69,7 @@ Nobody else has all five. GTD has method only. PARA has structure only. Letta ha
 Skills are recipes in markdown. Not Notion databases. Not Obsidian plugins. Not API endpoints. Plain `.md` files that any intelligence — human, AI, or future — can read. When you switch from Claude to GPT to Gemini to whatever comes next, the codex transfers. Systems die. Markdown lives forever.
 
 ### 4. Life-Scope (Not Just Work or Knowledge)
-Four quadrants covering your ENTIRE existence:
+Three life domains + one operating layer covering your ENTIRE existence:
 - **HP (Holistic Performance):** Health, identity, finance, skills, relationships
 - **LE (Legacy Evolution):** Family, home, marriage, children, heritage, estate
 - **GE (Generational Entrepreneurship):** Business, ventures, revenue, strategy
@@ -114,7 +114,7 @@ The world just converged on local-first, markdown-based, git-versioned knowledge
 → CODEX-FRAMEWORK.md — The full CODEX method, head-to-head comparisons
 
 ### For the Life Optimizer (1 hour)
-→ ONEMIND-CODEX.md — Full doctrine, 4 quadrants, scoring, philosophy
+→ ONEMIND-CODEX.md — Full doctrine, 3 domains + SO, scoring, philosophy
 
 ### For the AI Developer (15 minutes)
 → _codex/INTERFACE.md — How to make any AI agent codex-native
@@ -123,7 +123,7 @@ The world just converged on local-first, markdown-based, git-versioned knowledge
 
 ## What Comes Next
 
-1. **Starter Kit** — Fork the codex-live repo, get 4 domains (one per quadrant), start capturing in 10 minutes
+1. **Starter Kit** — Fork the codex-live repo, get 3 life domains + SO, start capturing in 10 minutes
 2. **Execution Demos** — Live videos of AI agents running skills from the codex
-3. **Community Codexes** — Others fork, customize, share their quadrant structures
+3. **Community Codexes** — Others fork, customize, share their domain structures
 4. **The Codex Academy** — Teaching the framework to the world

@@ -32,8 +32,8 @@ ai_summary: "Agent: {name} — {primary role in ≤10 words}"
 
 ## Quadrant Focus
 
-- **Primary**: {which quadrant does this agent primarily serve?}
-- **Secondary**: {any other quadrants}
+- **Primary**: {which domain does this agent primarily serve?}
+- **Secondary**: {any other domains}
 
 ## Skills
 

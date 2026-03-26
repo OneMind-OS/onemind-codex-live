@@ -59,7 +59,7 @@ C → O → D → E → ×
 Capture → Organize → Direct → Execute → × Multiply
 ```
 
-The vault is divided into 4 quadrants covering every domain of life:
+The vault is organized into 3 life domains + 1 operating layer covering every domain of life:
 
 ```text
 00-24  SO  — Sovereign Operations   (AI, tech, infrastructure)
@@ -78,7 +78,7 @@ The vault is divided into 4 quadrants covering every domain of life:
 2. Click the green **"Use this template"** button → **"Create a new repository"**
 3. Open your new repo folder in [Obsidian](https://obsidian.md) (free)
 4. **Read [`QUICK-START.md`](QUICK-START.md)** — your 30-minute onboarding guide
-5. Start with the bucket (quadrant) that matters most to you right now
+5. Start with the domain that matters most to you right now
 6. Replace my examples with your own life
 
 > The template vault always matches what you see on this site — it syncs automatically.

@@ -20,13 +20,16 @@ ONE MIND                          ← Philosophy / Brand
   └─ ONE MIND OS                  ← The complete operating system
        ├─ CODEX Method (C.O.D.E.×) ← The method you follow
        ├─ CODEX Vault              ← The file system you build
-       │    ├─ SO  (00–24)         ← Sovereign Operations (control plane)
-       │    ├─ HP  (25–49)         ← Holistic Performance (personal)
-       │    ├─ HP  (50–74)         ← Legacy Evolution (family & legacy)
-       │    └─ GE  (75–99)         ← Generational Entrepreneurship (business)
+       │    ├─ SO  (00–24)         ← Sovereign Operations (THE OPERATING LAYER)
+       │    │    └─ runs ──────────────────────────────────┐
+       │    ├─ HP  (25–49)         ← Holistic Performance  │ life
+       │    ├─ LE  (50–74)         ← Legacy Evolution      │ domains
+       │    └─ GE  (75–99)         ← Generational Entrep.  │
        ├─ Community                ← People using the system
        └─ Products                 ← Templates, courses, tools
 ```
+
+**Key insight:** SO is NOT a fourth life domain. It's the operating layer that RUNS the three life domains (HP, LE, GE). Think of it like macOS vs your apps — the OS isn't "another app."
 
 ---
 
@@ -72,7 +75,7 @@ ONE MIND                          ← Philosophy / Brand
 | Step | Name | What Happens |
 |------|------|-------------|
 | **C** | Capture | Grab anything — thought, file, link, idea. Zero friction. |
-| **O** | Organize | Route it to the right quadrant and domain. Add metadata. |
+| **O** | Organize | Route it to the right domain. Add metadata. |
 | **D** | Direct | Prioritize. Assign operators (human or AI). Define success. |
 | **E** | Execute | Do the work. Agents and humans act on directed items. |
 | **×** | Multiply | Review, measure, extract lessons. Feed insights back. Compound. |
@@ -89,7 +92,7 @@ ONE MIND                          ← Philosophy / Brand
 | **Think of it as** | PARA is both a method and a folder structure. CODEX is the same — the method tells you HOW, the vault is WHERE. |
 | **Format** | Plain Markdown files with YAML frontmatter. Universal. Works in any tool. |
 | **When to use** | Referring to someone's actual files, the folder structure, vault operations |
-| **Examples** | "My codex has 400 files across 4 quadrants." / "Drop it in your codex." / "The codex vault is plain Markdown." |
+| **Examples** | "My codex has 400 files across 3 domains + SO." / "Drop it in your codex." / "The codex vault is plain Markdown." |
 
 ---
 
@@ -148,8 +151,8 @@ ONE MIND                          ← Philosophy / Brand
 ### "Is this the same as OpenAI Codex?"
 **No.** OpenAI Codex is a coding agent for software engineers. One Mind Codex is a life operating system for everyone. Different audiences, different purpose, different product. Always say "One Mind Codex" or "The CODEX Method" to disambiguate.
 
-### "What's the difference between SO and the other quadrants?"
-**SO is the engine. HP/LE/GE are the vehicle.** SO is where your agents, tools, automations, and system infrastructure live. The other three quadrants are life domains — they hold the actual content of your life. SO runs them.
+### "What's the difference between SO and the life domains?"
+**SO is the engine. HP/LE/GE are the vehicle.** SO is where your agents, tools, automations, and system infrastructure live. The three life domains — they hold the actual content of your life. SO runs them.
 
 ### "Where does code go?"
 - **System code** (scripts, configs, deployments) → `_system/` folder (excluded from public template)
